@@ -1,0 +1,58 @@
+.quiz {
+  margin-top: 100px;
+}
+
+.slide {
+  background: #f9f9f9;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.03);
+  border-radius: 50px;
+  display: flex;
+}
+
+.left {
+  margin-right: 78px;
+  width: 100%;
+  padding: 150px 78px 50px 130px;
+}
+
+.right {
+  max-width: 420px;
+  width: 100%;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #383838;
+}
+
+.item {
+  .title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.item {
+  margin-top: 25px;
+}
+
+.radios {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.bar {
+  margin-top: 30px;
+}

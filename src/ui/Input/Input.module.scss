@@ -1,0 +1,22 @@
+.input {
+  border: 1.5px solid #999999;
+  border-radius: 10px;
+  padding: 0 12px;
+
+  input {
+    border: none;
+    background: none;
+    padding: 0;
+    display: block;
+    margin: 0;
+    padding: 13px 0 11px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}

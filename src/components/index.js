@@ -1,0 +1,13 @@
+export { Quiz } from "./Quiz/Quiz";
+export { TextLine } from "./TextLine/TextLine";
+export { CallbackSmall } from "./CallbackSmall/CallbackSmall";
+export { Reviews } from "./Reviews/Reviews";
+export { Topics } from "../../public/Topics/Topics";
+export { Callback } from "./Callback/Callback";
+export { IndexExpert } from "./IndexExpert/IndexExpert";
+export { IndexCard } from "./IndexCard/IndexCard";
+export { TabsComponent } from "./Tabs/Tabs";
+export { Footer } from "./Footer/Footer";
+export { Header } from "./Header/Header";
+export { Faq } from "./FAQ/Faq";
+export { Socials } from "./Socials/Socials";

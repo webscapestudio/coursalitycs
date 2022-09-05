@@ -1,0 +1,33 @@
+@import "styles/vars";
+
+.header {
+  box-shadow: $shadow;
+  padding: 12px 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 140px;
+  display: block;
+  svg {
+    display: block;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 90px;
+}
+
+.right {
+  margin-left: auto;
+}

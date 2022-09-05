@@ -1,0 +1,46 @@
+.faq {
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+.tab {
+  display: flex;
+}
+
+.tab__title {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.icon {
+  margin-left: auto;
+  margin-top: 15px;
+  svg {
+    transition: all 0.2s ease;
+    display: block;
+  }
+}
+
+.accordeon {
+  margin-top: 55px;
+}
+
+.active {
+  transform: rotate(180deg);
+}
+.item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.content {
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}

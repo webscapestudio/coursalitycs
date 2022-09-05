@@ -1,0 +1,35 @@
+.slider_arrow {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  background: #000;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #1b8ffb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  svg {
+    pointer-events: none;
+  }
+
+  &.slider_arrow_prev {
+    left: 0;
+  }
+
+  &.slider_arrow_next {
+    right: 0;
+  }
+
+  &.dark {
+    border: 1px solid #383838;
+
+    svg {
+      fill: #383838;
+    }
+  }
+}

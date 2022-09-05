@@ -1,0 +1,57 @@
+@import "styles/vars";
+.callback {
+  background: #f9f9f9;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.wrap {
+  display: flex;
+}
+
+.left {
+  max-width: 559px;
+  width: 100%;
+}
+
+.right {
+  padding: 120px 30px 120px 40px;
+  p {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  form {
+    margin-top: 25px;
+    .input {
+      margin-bottom: 16px;
+      max-width: 352px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.policy {
+  display: flex;
+  p {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 12px;
+  }
+
+  a {
+    color: $accent;
+  }
+}

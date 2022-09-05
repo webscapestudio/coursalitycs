@@ -1,0 +1,20 @@
+@import "styles/vars";
+
+.card {
+  margin-top: 100px;
+  background: #f9f9f9;
+  border-radius: 50px;
+  padding: 60px;
+
+  .title {
+    text-align: center;
+  }
+
+  .btn {
+    background: #f9f9f9;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+  }
+}
