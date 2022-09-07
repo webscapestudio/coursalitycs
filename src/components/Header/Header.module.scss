@@ -3,7 +3,9 @@
 .header {
   box-shadow: $shadow;
   padding: 12px 0;
-  position: absolute;
+  position: fixed;
+  z-index: 20;
+  background: white;
   width: 100%;
   left: 0;
   top: 0;
