@@ -86,9 +86,12 @@
     top: 78px;
     transition: all 0.3s ease;
     width: 100%;
-    min-height: 100vh;
+    height: calc(100vh - 78px);
+    overflow-y: scroll;
     flex-direction: column;
     background: $white;
+    padding: 0 16px;
+    gap: 0;
     &.active {
       left: 0;
     }
@@ -98,5 +101,10 @@
 @media (max-width: 768px) {
   .logo {
     width: 80px;
+  }
+
+  .nav {
+    top: 55px;
+    height: calc(100vh - 55px);
   }
 }

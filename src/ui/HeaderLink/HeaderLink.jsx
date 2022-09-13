@@ -24,7 +24,6 @@ export const HeaderLink = ({
           className={cn(s.link, className, {
             [s.active]: isOpen,
             [s.link__sub]: sub || subTopics,
-            // [s.link__sub]: subTopics,
           })}
           {...props}
           onClick={() => {
@@ -47,17 +46,19 @@ export const HeaderLink = ({
           <div className="container-xl">
             <div className={s.drop__wrap}>
               {sub.map((item, idx) => (
-                <div key={idx} className={cn(s.drop__item, s.gray)}>
-                  {item.icon}
-                  <div className={s.drop__item_info}>
-                    <h4>{item.title}</h4>
-                    {item.link && (
-                      <Link href={item.link}>
-                        <a className={s.drop__item_link}>Learn more</a>
-                      </Link>
-                    )}
+                <Link key={idx} href={item.link}>
+                  <div className={cn(s.drop__item, s.gray)}>
+                    {item.icon}
+                    <div className={s.drop__item_info}>
+                      <h4>{item.title}</h4>
+                      {item.link && (
+                        <Link href={item.link}>
+                          <a className={s.drop__item_link}>Learn more</a>
+                        </Link>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
