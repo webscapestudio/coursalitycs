@@ -1,23 +1,23 @@
-import cn from "classnames";
-import Head from "next/head";
-import Image from "next/image";
-import MainLayout from "../src/layouts/MainLayout";
-import { Button, SliderArrow, Title } from "../src/ui";
-import s from "./index.module.scss";
-import billy from "./billy.png";
-import CalendarIcon from "../public/img/calendar.svg";
-import MailIcon from "../public/img/mail.svg";
-import SearchIcon from "../public/img/search.svg";
-import HeroUserImage from "../public/img/hero_user.jpg";
+import cn from "classnames"
+import Head from "next/head"
+import Image from "next/image"
+import MainLayout from "../src/layouts/MainLayout"
+import { Button, SliderArrow, Title } from "../src/ui"
+import s from "./index.module.scss"
+import billy from "./billy.png"
+import CalendarIcon from "../public/img/calendar.svg"
+import MailIcon from "../public/img/mail.svg"
+import SearchIcon from "../public/img/search.svg"
+import HeroUserImage from "../public/img/hero_user.jpg"
 
-import DigitalIcon from "../public/img/topics/digital.svg";
-import FinanceIcon from "../public/img/topics/finance.svg";
-import HumanIcon from "../public/img/topics/human.svg";
-import LeadershipIcon from "../public/img/topics/leadership.svg";
-import MarketingIcon from "../public/img/topics/marking.svg";
-import NegotiationsIcon from "../public/img/topics/negotiations.svg";
-import StrategyIcon from "../public/img/topics/strategy.svg";
-import WomanIcon from "../public/img/topics/woman.svg";
+import DigitalIcon from "../public/img/topics/digital.svg"
+import FinanceIcon from "../public/img/topics/finance.svg"
+import HumanIcon from "../public/img/topics/human.svg"
+import LeadershipIcon from "../public/img/topics/leadership.svg"
+import MarketingIcon from "../public/img/topics/marking.svg"
+import NegotiationsIcon from "../public/img/topics/negotiations.svg"
+import StrategyIcon from "../public/img/topics/strategy.svg"
+import WomanIcon from "../public/img/topics/woman.svg"
 
 import {
   Callback,
@@ -31,97 +31,23 @@ import {
   Topics,
   Quiz,
   Faq,
-} from "../src/components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper";
-import { useRef } from "react";
-import ExpertImage from "../public/img/expert.jpg";
-import Reviews1 from "../public/img/reviews/1.jpg";
-import Reviews2 from "../public/img/reviews/2.jpg";
-import Reviews3 from "../public/img/reviews/3.jpg";
+  CoursesSlider,
+  ExpertsSlider,
+} from "../src/components"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { EffectCoverflow, Navigation } from "swiper"
+import { useRef } from "react"
+import ExpertImage from "../public/img/expert.jpg"
+import Reviews1 from "../public/img/reviews/1.jpg"
+import Reviews2 from "../public/img/reviews/2.jpg"
+import Reviews3 from "../public/img/reviews/3.jpg"
+import { useEffect } from "react"
+import axios from "axios"
+import { useState } from "react"
 
-export default function Home() {
-  const infoCards = [
-    {
-      id: 1,
-      title: "Advanced Human Resource Executive Program",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jul 11—22, 2022",
-    },
-    {
-      id: 2,
-      title:
-        "The Positive Leader: Deep Change and Organizational Transformation",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jun 19—24, 2022",
-    },
-    {
-      id: 3,
-      title: "The Manchester Leadership Development Programme",
-      address: "Alliance Manchester Business School",
-      map: "Manchester, United Kingdom",
-      date: "Jul 4—8, 2022",
-    },
-    {
-      id: 4,
-      title: "Strategic Human Resource Leadership",
-      address: "Rotman School of Management",
-      map: "Toronto, Ontario, Canada",
-      date: "May 2—6, 2022",
-    },
-    {
-      id: 5,
-      title: "Leading Strategic Growth and Change",
-      address: "Columbia Business School",
-      map: "New York, United States",
-      date: "Jul 11—22, 2022",
-    },
-  ];
-
-  const expertsData = [
-    {
-      id: 1,
-      photo: ExpertImage,
-      text: "“I teach executives in open enrollment and customized programs on the topics of leadership, as well as in the MBA and EMBA programs at” ESMT - one of the world's top providers of executive education (according to the latest Financial Times ranking).",
-      name: "Konstantin Korotov",
-      position:
-        "Associate Professor of Organizational Behavior at ESMT Berlinl",
-    },
-    {
-      id: 2,
-      photo: ExpertImage,
-      text: "“I teach executives in open enrollment and customized programs on the topics of leadership, as well as in the MBA and EMBA programs at” ESMT - one of the world's top providers of executive education (according to the latest Financial Times ranking).",
-      name: "Konstantin Korotov",
-      position:
-        "Associate Professor of Organizational Behavior at ESMT Berlinl",
-    },
-    {
-      id: 3,
-      photo: ExpertImage,
-      text: "“I teach executives in open enrollment and customized programs on the topics of leadership, as well as in the MBA and EMBA programs at” ESMT - one of the world's top providers of executive education (according to the latest Financial Times ranking).",
-      name: "Konstantin Korotov",
-      position:
-        "Associate Professor of Organizational Behavior at ESMT Berlinl",
-    },
-    {
-      id: 4,
-      photo: ExpertImage,
-      text: "“I teach executives in open enrollment and customized programs on the topics of leadership, as well as in the MBA and EMBA programs at” ESMT - one of the world's top providers of executive education (according to the latest Financial Times ranking).",
-      name: "Konstantin Korotov",
-      position:
-        "Associate Professor of Organizational Behavior at ESMT Berlinl",
-    },
-    {
-      id: 5,
-      photo: ExpertImage,
-      text: "“I teach executives in open enrollment and customized programs on the topics of leadership, as well as in the MBA and EMBA programs at” ESMT - one of the world's top providers of executive education (according to the latest Financial Times ranking).",
-      name: "Konstantin Korotov",
-      position:
-        "Associate Professor of Organizational Behavior at ESMT Berlinl",
-    },
-  ];
+export default function Home({ topics, experts }) {
+  const expertsData = experts
+  // console.log(topics.groups, "topics")
 
   const topicsData = [
     {
@@ -180,7 +106,7 @@ export default function Home() {
       img: <NegotiationsIcon />,
       text: "Over 150 topics",
     },
-  ];
+  ]
 
   const reviewsData = [
     {
@@ -204,7 +130,7 @@ export default function Home() {
       text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
       img: Reviews3,
     },
-  ];
+  ]
 
   const faqData = [
     {
@@ -239,9 +165,9 @@ export default function Home() {
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
-  ];
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
+  ]
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
 
   return (
     <>
@@ -265,8 +191,8 @@ export default function Home() {
                 </p>
 
                 <div className={s.hero__btn}>
-                  <Button>Search Experts</Button>
-                  <Button style="accent">Search Experts</Button>
+                  <Button link="/experts">Search Experts</Button>
+                  <Button style="accent">Browse Courses</Button>
                 </div>
 
                 <div className={s.hero__info}>
@@ -338,91 +264,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section className={s.index__slider_section}>
-            <div className="container">
-              <Title tag="h2">
-                Thousands of <span>courses</span> from leading educators and{" "}
-                <br /> institutions at your fingertips
-              </Title>
+          <CoursesSlider />
 
-              <Swiper
-                spaceBetween={0}
-                centeredSlides={true}
-                slidesPerView={"auto"}
-                className={s.index__slider}
-                loop={true}
-                effect="coverflow"
-                coverflowEffect={{
-                  rotate: 0,
-                  stretch: 50,
-                  depth: 588,
-                  modifier: 1,
-                  slideShadows: false,
-                }}
-                modules={[EffectCoverflow, Navigation]}
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
-                navigation={{
-                  prevEl: navigationPrevRef.current,
-                  nextEl: navigationNextRef.current,
-                }}
-                onBeforeInit={(swiper) => {
-                  swiper.params.navigation.prevEl = navigationPrevRef.current;
-                  swiper.params.navigation.nextEl = navigationNextRef.current;
-                }}
-              >
-                {infoCards.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <IndexCard item={item} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              <SliderArrow prev />
-              <SliderArrow next />
-              <Button link="/courses" style="accent" className={s.btn}>
-                See All Courses
-              </Button>
-            </div>
-          </section>
-
-          <section className={s.expert__section}>
-            <div className="container-full">
-              <Title tag="h2" className={s.expert__section_title}>
-                Largest database of executive-level <br />
-                <span>educators and expert</span>
-                practitioners
-              </Title>
-
-              <Swiper
-                spaceBetween={15}
-                centeredSlides={true}
-                slidesPerView="auto"
-                className={s.expert__slider}
-                loop={true}
-                modules={[Navigation]}
-                navigation={{
-                  prevEl: navigationPrevRef.current,
-                  nextEl: navigationNextRef.current,
-                }}
-              >
-                {expertsData.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <IndexExpert data={item} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              <div className={s.arrows}>
-                <SliderArrow prev className={s.arr__prev} xs style="dark" />
-                <SliderArrow next className={s.arr__next} xs style="dark" />
-              </div>
-
-              {/* <Button className={s.btn} link="/experts">
-                See All Experts
-              </Button> */}
-            </div>
-          </section>
+          <ExpertsSlider data={expertsData} />
 
           <section className={s.callback}>
             <div className="container">
@@ -460,5 +304,17 @@ export default function Home() {
         </main>
       </MainLayout>
     </>
-  );
+  )
+}
+
+export async function getServerSideProps() {
+  const res = await axios.get(
+    `https://ca-production.coursalytics.com/api/homepage/popular_courses`
+  )
+  const expRes = await axios.get(
+    "https://ca-production.coursalytics.com/api/homepage/experts"
+  )
+  const topics = await res.data
+  const experts = await expRes.data
+  return { props: { topics, experts } }
 }

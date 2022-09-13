@@ -1,0 +1,184 @@
+@import "styles/vars";
+
+.hero {
+  padding-top: 120px;
+}
+
+.hero__title {
+  text-align: center;
+}
+
+.heroline__mob {
+  display: none;
+}
+
+.heroline {
+  position: absolute;
+  width: 100%;
+  display: block;
+  z-index: 0;
+  top: 80px;
+}
+
+.hero__fx {
+  position: relative;
+}
+
+.hero__girl {
+  width: 202px;
+  position: relative;
+  z-index: 1;
+  height: 206px;
+  margin: 60px auto 0;
+}
+
+.tabs {
+  margin-top: 100px;
+}
+
+.sure {
+  margin-top: 100px;
+}
+
+.sure__title {
+  text-align: center;
+  max-width: 509px;
+  margin: 0 auto;
+}
+
+.sure__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  .div {
+    height: 75px;
+    width: 1px;
+    background: $gray;
+    margin: 0 20px;
+  }
+}
+
+.sure__item {
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* or 122% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+}
+
+.callback {
+  margin-top: 100px;
+}
+
+.reviews__section {
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero__fx {
+    svg {
+      top: 88px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sure {
+    margin-top: 70px;
+  }
+
+  .callback {
+    margin-top: 70px;
+  }
+
+  .reviews__section {
+    margin-top: 100px;
+  }
+
+  .sure__wrap {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 32px;
+    .div {
+      display: none;
+    }
+  }
+
+  .sure__item {
+    max-width: 45%;
+    width: 100%;
+  }
+
+  .tabs {
+    margin-top: 70px;
+  }
+
+  .hero__girl {
+    margin: 30px auto 0;
+  }
+
+  .hero__fx {
+    svg {
+      top: 102px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__girl {
+    margin: 30px auto 0;
+  }
+
+  .heroline {
+    display: none;
+  }
+
+  .heroline__mob {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
+  .hero__fx {
+    svg {
+      top: 109px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sure__wrap {
+    gap: 16px;
+    .div {
+      display: block;
+      height: 40px;
+      width: 1px;
+      background: $accent;
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+  .sure__item {
+    max-width: none;
+    width: 100%;
+    p {
+      text-align: left;
+      span {
+        color: $accent;
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ export const Callback = () => {
           <Image src={Billy} layout="responsive" alt="billy" />
         </div>
         <div className={s.right}>
-          <Title tag="h3">
+          <Title tag="h3" className={s.title}>
             Interested to <span>learn more?</span>
           </Title>
 

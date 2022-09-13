@@ -7,3 +7,9 @@
     height: auto;
   }
 }
+
+@media (max-width: 1024px) {
+  .text {
+    margin-top: 70px;
+  }
+}

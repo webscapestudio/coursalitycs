@@ -1,7 +1,14 @@
-import s from "./Faq.module.scss";
-import { Accordition, AccorditionItem, Title } from "../../ui";
-import cn from "classnames";
-import ChevronIcon from "./chevron.svg";
+import s from "./Faq.module.scss"
+import { Accordition, AccorditionItem, Title } from "../../ui"
+import cn from "classnames"
+import ChevronIcon from "./chevron.svg"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion"
 
 export const Faq = ({ data }) => {
   return (
@@ -11,7 +18,7 @@ export const Faq = ({ data }) => {
           Questions and answers
         </Title>
 
-        <div className={s.accordeon}>
+        {/*  <div className={s.accordeon}>
           <Accordition>
             {data.map((item) => (
               <AccorditionItem
@@ -20,9 +27,25 @@ export const Faq = ({ data }) => {
                 content={item.content}
               />
             ))}
-          </Accordition>
-        </div>
+          </Accordition> */}
+        {/* </div> */}
+
+        <Accordion>
+          {data.map((item) => (
+            <AccordionItem key={item.id} className={s.item}>
+              <AccordionItemHeading className={s.title}>
+                <AccordionItemButton className={s.top}>
+                  <p>{item.title}</p>
+                  <ChevronIcon className={s.icon} />
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel className={s.content}>
+                <p>{item.content}</p>
+              </AccordionItemPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
-  );
-};
+  )
+}

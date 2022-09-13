@@ -1,7 +1,7 @@
-import s from "./Footer.module.scss";
-import { Button, Input } from "../../ui/index";
-import Link from "next/link";
-import { Socials } from "../Socials/Socials";
+import s from "./Footer.module.scss"
+import { Button, Input } from "../../ui/index"
+import Link from "next/link"
+import { Socials } from "../Socials/Socials"
 
 export const Footer = () => {
   return (
@@ -13,11 +13,13 @@ export const Footer = () => {
               <h4>Coursalytics</h4>
               <ul>
                 <li>
-                  <Link href="/">Terms of Use</Link>
+                  <Link href="/terms">Terms of Use</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Privacy</Link>
+                  <Link href="https://coursalytics.com/publications/privacy-policy">
+                    Privacy
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -26,19 +28,19 @@ export const Footer = () => {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <Link href="/">Experts’ booking</Link>
+                  <Link href="/experts">Experts’ booking</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Executive programs</Link>
+                  <Link href="/programs">Executive programs</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Customized programs</Link>
+                  <Link href="/programs">Customized programs</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Research & Analytics</Link>
+                  <Link href="/analytics">Research & Analytics</Link>
                 </li>
               </ul>
             </div>
@@ -47,19 +49,21 @@ export const Footer = () => {
               <h4>More info</h4>
               <ul>
                 <li>
-                  <Link href="/">Blog</Link>
+                  <Link href="https://coursalytics.com/blog/">Blog</Link>
                 </li>
 
                 <li>
-                  <Link href="/">About Us</Link>
+                  <Link href="/about">About Us</Link>
                 </li>
 
                 <li>
-                  <Link href="/">FAQ</Link>
+                  <Link href="/faq">FAQ</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Contact us by email</Link>
+                  <a href="mailto:hello@coursalytics.com">
+                    Contact Us By Email
+                  </a>
                 </li>
               </ul>
             </div>
@@ -110,5 +114,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

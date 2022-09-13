@@ -13,8 +13,8 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 45px;
-
   color: #383838;
+
   span {
     color: $accent;
   }
@@ -28,9 +28,41 @@
     color: $accent;
   }
 }
-.h4 {
+
+@media (max-width: 1200px) {
+  .h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    span {
+      color: $accent;
+    }
+  }
 }
-.h5 {
+
+@media (max-width: 1024px) {
+  .h2 {
+    font-size: 32px;
+    line-height: 130%;
+  }
 }
-.h6 {
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 30px;
+    line-height: normal;
+    span {
+      color: $accent;
+    }
+  }
+
+  .h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

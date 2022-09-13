@@ -1,6 +1,8 @@
-import s from "./AccorditionItem.module.scss";
-import Chevron from "./chevron.svg";
+import { useState } from "react"
+import s from "./AccorditionItem.module.scss"
+import Chevron from "./chevron.svg"
 export const AccorditionItem = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <div className={s.item}>
       <div className={s.top}>
@@ -8,5 +10,5 @@ export const AccorditionItem = ({ title, content }) => {
         <Chevron className={s.icon} />
       </div>
     </div>
-  );
-};
+  )
+}

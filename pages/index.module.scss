@@ -19,7 +19,7 @@
 
 .hero__btn {
   margin-top: 32px;
-  button {
+  a {
     margin-right: 20px;
     &:last-child {
       margin-right: 0;
@@ -119,7 +119,7 @@
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
-    font-size: 11.8242px;
+    font-size: 12px;
     letter-spacing: 0.02em;
     color: #545567;
     margin-top: -5px;
@@ -142,68 +142,6 @@
   margin-top: 60px;
 }
 
-.index__slider_section {
-  margin-top: 100px;
-  :global(.container) {
-    position: relative;
-  }
-
-  .btn {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    margin: 50px auto 0;
-  }
-}
-
-.index__slider {
-  max-width: 808px;
-  margin: 50px auto 0;
-  width: 100%;
-  :global(.swiper-slide) {
-    max-width: 360px;
-    width: 100%;
-  }
-}
-
-.expert__section {
-  margin-top: 100px;
-  .arr__next,
-  .arr__prev {
-    position: static;
-    top: 0;
-    transform: none;
-  }
-
-  .arrows {
-    display: flex;
-    justify-content: space-between;
-    max-width: 152px;
-    margin: 20px auto 0;
-  }
-
-  .btn {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 20px auto 0;
-    display: inline-block;
-  }
-}
-
-.expert__section_title {
-  text-align: center;
-}
-
-.expert__slider {
-  margin-top: 60px;
-  :global(.swiper-slide) {
-    max-width: 749px;
-    width: 100%;
-  }
-}
-
 .callback {
   margin-top: 100px;
 }
@@ -222,5 +160,70 @@
 
   .title {
     text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tabs__wrap {
+    margin-top: 16px;
+  }
+
+  .hero__subtitle {
+    order: 1;
+  }
+
+  .hero__btn {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-right: 0;
+      margin-bottom: 24px;
+      width: 260px;
+      display: block;
+    }
+  }
+
+  .tabs {
+    margin-top: 70px;
+  }
+
+  .callback {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__info_item {
+    .info {
+      display: none;
+    }
+  }
+
+  .hero__user {
+    display: none;
+  }
+
+  .hero__info_item:nth-of-type(3) {
+    right: 20%;
+  }
+
+  .hero__info_item:nth-of-type(4) {
+    left: 20%;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero__info_item:nth-of-type(4) {
+    left: 10%;
+  }
+
+  .hero__title {
+    max-width: 280px;
+  }
+
+  .hero__subtitle {
+    line-height: 24px;
+    max-width: 340px;
   }
 }

@@ -18,4 +18,24 @@
 
 .icon {
   margin-left: auto;
+  width: 30px;
+  height: 15px;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  .title {
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .icon {
+    width: 12px;
+    height: 6px;
+  }
 }

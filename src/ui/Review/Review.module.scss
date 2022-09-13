@@ -2,7 +2,6 @@
 
 .card {
   height: 663px;
-  max-width: 400px;
   width: 100%;
   border-radius: 40px;
   overflow: hidden;
@@ -17,6 +16,14 @@
   z-index: 1;
   padding: 40px 30px;
   font-weight: 400;
+}
+
+.name__mob {
+  display: none;
+}
+
+.text__mob {
+  display: none;
 }
 
 .name {
@@ -35,4 +42,76 @@
 .text {
   font-size: 16px;
   line-height: 16px;
+}
+
+@media (max-width: 1440px) {
+  .card {
+    height: 580px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    height: 500px;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .text {
+    display: none;
+  }
+  .name__mob {
+    display: block;
+    display: inline-block;
+  }
+
+  .text__mob {
+    margin-top: 16px;
+    display: block;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    height: 240px;
+    border-radius: 22px;
+  }
+
+  .info {
+    padding: 16px;
+    margin-bottom: 0;
+  }
+
+  .title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .text__mob {
+    text-align: center;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 24px;
+  }
+
+  .name__mob {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #999999;
+    margin-top: 16px;
+  }
 }

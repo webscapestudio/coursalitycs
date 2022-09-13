@@ -68,3 +68,93 @@
   line-height: 28px;
   color: #383838;
 }
+
+@media (max-width: 1024px) {
+  .tabs {
+    flex-direction: column;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    /* ie 10+ */
+
+    -ms-overflow-style: none;
+
+    /* фф (свойство больше не работает, других способов тоже нет)*/
+
+    overflow: -moz-scrollbars-none;
+  }
+
+  .contents {
+    max-width: none;
+    display: none;
+    width: -webkit-fill-available;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .btns {
+    flex-direction: row;
+    max-width: none;
+    width: auto;
+    overflow-x: scroll;
+    &:global(.react-tabs__tab--selected) {
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 50px;
+      opacity: 1;
+
+      .hidden {
+        opacity: 1;
+        max-height: none;
+      }
+    }
+  }
+
+  .tab {
+    width: 300px;
+    display: block;
+    margin-right: 16px;
+    margin-bottom: 0;
+    padding: 32px;
+    background: #f9f9f9;
+    border-radius: 50px;
+
+    .hidden {
+      opacity: 1;
+      max-height: none;
+      transition: all 0.1s ease;
+
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 20px;
+        color: #999999;
+      }
+
+      .link {
+        font-weight: 400;
+        font-size: 18px;
+        display: block;
+        margin-top: 20px;
+        line-height: 28px;
+        color: $accent;
+      }
+    }
+
+    &:global(.react-tabs__tab--selected) {
+      padding: 32px;
+      background: #f9f9f9;
+      border-radius: 50px;
+      .hidden {
+        opacity: 1;
+        max-height: none;
+      }
+    }
+  }
+}

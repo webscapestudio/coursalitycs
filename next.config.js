@@ -9,6 +9,21 @@ const nextConfig = {
 
     return config
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/:path*",
+          destination: `https://ca-production.coursalytics.com/:path*`,
+        },
+      ],
+    }
+  },
+
+  images: {
+    domains: ["ca-production.coursalytics.com"],
+    formats: ["image/avif", "image/webp"],
+  },
 }
 
 module.exports = nextConfig

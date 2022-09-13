@@ -67,3 +67,52 @@
 .socials {
   margin-left: auto;
 }
+
+@media (max-width: 1200px) {
+  .footer__item h4 {
+    font-size: 20px;
+    line-height: 135%;
+  }
+
+  .footer__item a {
+    line-height: 120%;
+    font-size: 18px;
+  }
+
+  .footer__item li {
+    margin-bottom: 15px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom__text {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top {
+    nav {
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer__item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    nav {
+      flex-wrap: wrap;
+    }
+  }
+
+  .footer__item {
+    width: 100%;
+  }
+}

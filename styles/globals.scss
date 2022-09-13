@@ -1,4 +1,5 @@
 @import "./fonts.scss";
+
 // @import url("http://fonts.cdnfonts.com/css/helvetica-neue-9");
 @import "./vars";
 @import "./grid.scss";
@@ -65,4 +66,102 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.cookies {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  left: 50% !important;
+  padding: 32px 40px;
+  transform: translateX(-50%);
+  align-items: center !important;
+  > div {
+    margin: 0 !important;
+    margin-left: 27px;
+  }
+}
+
+.cookies__btn {
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 !important;
+  font-size: 16px;
+  line-height: 1;
+  border: 2px solid #000 !important;
+  border-radius: 30px !important;
+  padding: 22px 39px 19px !important;
+  background: #fff !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cookies {
+    max-width: 768px !important;
+    width: 100%;
+    margin: 0 auto;
+    left: 50% !important;
+    padding: 16px;
+    transform: translateX(-50%);
+    align-items: center !important;
+    > div {
+      margin: 0 !important;
+      margin-left: 27px;
+      font-size: 14px;
+      line-height: 120%;
+
+      p {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .cookies__btn {
+    margin: 0 !important;
+    font-size: 14px;
+    line-height: 120%;
+    line-height: 1;
+    border: 2px solid #000 !important;
+    border-radius: 30px !important;
+    padding: 16px 24px 14px !important;
+    background: #fff !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 102px;
+  }
+}
+
+@media (max-width: 550px) {
+  .cookies {
+    max-width: 768px !important;
+    width: 100%;
+
+    left: 50% !important;
+    flex-direction: column;
+    padding: 16px;
+    transform: translateX(-50%);
+    align-items: center !important;
+    > div {
+      margin: 0 0 16px 0 !important;
+      font-size: 14px;
+      line-height: 120%;
+      flex: none !important;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      p {
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+  }
 }

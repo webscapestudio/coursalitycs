@@ -1,0 +1,40 @@
+.wrap {
+  margin-top: 100px;
+}
+
+.inner {
+  background: #f9f9f9;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  padding: 60px 70px;
+}
+
+.motion {
+  max-width: 840px;
+  margin: 60px auto 0;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    margin-top: 70px;
+  }
+  .inner {
+    padding: 50px 40px;
+  }
+
+  .motion {
+    margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrap {
+    > .container {
+      padding: 0;
+    }
+  }
+  .inner {
+    padding: 30px;
+    border-radius: 24px;
+  }
+}

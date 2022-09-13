@@ -9,7 +9,6 @@ export const Topics = ({ data }) => {
     setTopics(data)
   }, [])
 
-  console.log(topics)
   return (
     <div className={s.topics}>
       {topics.map((item) => (

@@ -15,14 +15,18 @@
   z-index: 2;
   svg {
     pointer-events: none;
+    width: 10px;
+    height: 20px;
   }
 
   &.slider_arrow_prev {
     left: 0;
+    // top: 0;
   }
 
   &.slider_arrow_next {
     right: 0;
+    // top: 0;
   }
 
   &.dark {
@@ -30,6 +34,22 @@
 
     svg {
       fill: #383838;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider_arrow {
+    width: 40px;
+    height: 40px;
+    position: static;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    svg {
+      width: 7px;
+      height: 14px;
     }
   }
 }

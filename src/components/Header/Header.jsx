@@ -3,15 +3,126 @@ import s from "./Header.module.scss"
 import Link from "next/link"
 import LogoIcon from "./logo.svg"
 import { HeaderLink, Input } from "../../ui"
+import ExpertsIcon from "./icons/experts.svg"
+import ProgramsIcon from "./icons/programs.svg"
+import CustomizedIcon from "./icons/customized.svg"
+import LoupeIcon from "./icons/loupe.svg"
+
+import DigitalIcon from "../../../public/img/topics/digital.svg"
+import FinanceIcon from "../../../public/img/topics/finance.svg"
+import HumanIcon from "../../../public/img/topics/human.svg"
+import LeadershipIcon from "../../../public/img/topics/leadership.svg"
+import MarketingIcon from "../../../public/img/topics/marking.svg"
+import NegotiationsIcon from "../../../public/img/topics/negotiations.svg"
+import StrategyIcon from "../../../public/img/topics/strategy.svg"
+import WomanIcon from "../../../public/img/topics/woman.svg"
+import { useState } from "react"
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const links = [
-    { id: 1, title: "Services", link: "/services" },
-    { id: 2, title: "Topics", link: "/topics" },
+    {
+      id: 1,
+      title: "Services",
+      link: "#",
+      sub: [
+        {
+          id: 1,
+          link: "/experts-booking",
+          title: "Experts booking",
+          icon: <ExpertsIcon />,
+        },
+        {
+          id: 2,
+          link: "/programs-exlusive",
+          title: "Experts booking",
+          icon: <ProgramsIcon />,
+        },
+        {
+          id: 3,
+          link: "/programs-customized",
+          title: "Experts booking",
+          icon: <CustomizedIcon />,
+        },
+        {
+          id: 4,
+          link: "/research",
+          title: "Research & Analytics",
+          icon: <LoupeIcon />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "Topics",
+      link: "#",
+      subTopics: [
+        {
+          id: 1,
+          title: "Strategy",
+          link: "/",
+          icon: <StrategyIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 2,
+          title: "Women Leadership",
+          link: "/",
+          icon: <WomanIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 3,
+          title: " Leadership",
+          link: "/",
+          icon: <LeadershipIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 4,
+          title: "Marketing",
+          link: "/",
+          icon: <MarketingIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 5,
+          title: "Human Capital",
+          link: "/",
+          icon: <HumanIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 6,
+          title: "Digital Transformation",
+          link: "/",
+          icon: <DigitalIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 7,
+          title: "Finance",
+          link: "/",
+          icon: <FinanceIcon />,
+          text: "Over 150 topics",
+        },
+        {
+          id: 8,
+          title: "Negotiations",
+          link: "/",
+          icon: <NegotiationsIcon />,
+          text: "Over 150 topics",
+        },
+      ],
+    },
     { id: 3, title: "Courses", link: "/courses" },
     { id: 4, title: "Experts", link: "/experts" },
     { id: 5, title: "About us", link: "/about" },
   ]
+
+  const showMenu = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <header className={cn(s.header)}>
       <div className="container">
@@ -22,16 +133,33 @@ export const Header = () => {
             </a>
           </Link>
 
-          <nav className={s.nav}>
+          <nav
+            className={cn(s.nav, {
+              [s.active]: isOpen,
+            })}
+          >
             {links.map((item) => (
-              <HeaderLink key={item.id} link={item.link}>
+              <HeaderLink
+                key={item.id}
+                sub={item.sub}
+                subTopics={item.subTopics}
+                link={item.link}
+              >
                 {item.title}
               </HeaderLink>
             ))}
           </nav>
-          <div className={s.right}>
-            <Input placeholder="Enter keywords" />
+          <div
+            className={cn(s.burger, {
+              [s.active]: isOpen,
+            })}
+            onClick={showMenu}
+          >
+            <span></span>
           </div>
+          {/* <div className={s.right}>
+             <Input placeholder="Enter keywords" /> 
+          </div> */}
         </div>
       </div>
     </header>

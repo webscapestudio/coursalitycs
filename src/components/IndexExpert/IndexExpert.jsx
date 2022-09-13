@@ -5,7 +5,13 @@ export const IndexExpert = ({ data }) => {
   return (
     <div className={s.card}>
       <div className={s.img}>
-        <Image src={data.photo} layout="responsive" alt={data.name} />
+        <Image
+          src={`https://ca-production.coursalytics.com${data.photo}`}
+          layout="responsive"
+          width={100}
+          height={100}
+          alt={data.name}
+        />
       </div>
       <p>{data.text}</p>
       <div className={s.bottom}>

@@ -44,3 +44,55 @@
   font-size: 20px;
   line-height: 20px;
 }
+
+@media (max-width: 1024px) {
+  .faq {
+    margin-top: 70px;
+  }
+
+  .accordeon {
+    margin-top: 24px;
+  }
+}
+
+.item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.icon {
+  margin-left: auto;
+  width: 30px;
+  height: 15px;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  .title {
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .icon {
+    width: 12px;
+    height: 6px;
+  }
+}

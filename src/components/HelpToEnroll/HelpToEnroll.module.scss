@@ -1,0 +1,65 @@
+@import "styles/vars";
+
+.section {
+  margin-top: 100px;
+}
+
+.title {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto;
+}
+.wrap {
+  margin-top: 60px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fx {
+  position: absolute;
+  background: $white;
+}
+
+.vertical {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+}
+
+.horizontal {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 0;
+}
+.item__icon {
+  width: 52px;
+  height: 52px;
+}
+
+.item__text {
+  max-width: 450px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1024px) {
+  .section {
+    margin-top: 70px;
+  }
+}

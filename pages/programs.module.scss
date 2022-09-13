@@ -1,0 +1,53 @@
+.hero {
+  margin-top: 200px;
+}
+
+.hero__title {
+  text-align: center;
+}
+
+.typing {
+  padding: 4px;
+  background: rgba(27, 143, 251, 0.2);
+  span {
+    width: 2px;
+    font-weight: 300;
+  }
+}
+.index__slider_section {
+  margin-top: 70px;
+  :global(.container) {
+    position: relative;
+  }
+
+  .btn {
+    position: static;
+    left: auto;
+    transform: none;
+    max-width: 260px;
+    display: block;
+    margin: 0px auto 0;
+  }
+}
+
+.index__slider_arr {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  margin-top: 44px;
+  height: 40px;
+  svg {
+    width: 8px;
+    height: 14px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.index__slider_arr_prev {
+  // margin-right: auto;
+  left: 0;
+}
+.index__slider_arr_next {
+  right: 0;
+}

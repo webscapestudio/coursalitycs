@@ -17,3 +17,16 @@
   padding: 0 30px;
   width: 100%;
 }
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .container-xl {
+    padding: 0 15px;
+  }
+}

@@ -3,8 +3,6 @@ import Link from "next/link"
 import s from "./TopicItem.module.scss"
 
 export const TopicItem = ({ data }) => {
-  console.log(data)
-
   return (
     <Link href={data.link}>
       <a className={s.card}>

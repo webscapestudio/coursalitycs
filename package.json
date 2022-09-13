@@ -2,6 +2,7 @@
   "name": "coursalitycs",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://ca-production.coursalytics.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,9 +18,12 @@
     "next-redux-wrapper": "^7.0.5",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-cookie-consent": "^8.0.1",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.2",
     "react-tabs": "^5.1.0",
+    "react-typing-effect": "^2.0.5",
     "sass": "^1.54.5",
     "swiper": "^8.3.2"
   },
