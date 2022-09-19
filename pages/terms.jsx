@@ -1,9 +1,9 @@
-import Head from "next/head"
-import Link from "next/link"
-import { Callback } from "../src/components"
-import MainLayout from "../src/layouts/MainLayout"
-import { Title } from "../src/ui"
-import s from "./terms.module.scss"
+import Head from "next/head";
+import Link from "next/link";
+import { Callback } from "../src/components";
+import MainLayout from "../src/layouts/MainLayout";
+import { Title } from "../src/ui";
+import s from "./terms.module.scss";
 
 export default function Terms() {
   const faq = [
@@ -22,7 +22,7 @@ export default function Terms() {
       title: "3. Account Responsibilities.",
       text: "You are responsible for maintaining the confidentiality of your Account login information and are fully responsible for all activities that occur under your Account. You agree to immediately notify Company of any unauthorized use, or suspected unauthorized use of your Account or any other breach of security. Company cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements.",
     },
-  ]
+  ];
   return (
     <>
       <Head>
@@ -87,5 +87,5 @@ export default function Terms() {
         </section>
       </MainLayout>
     </>
-  )
+  );
 }

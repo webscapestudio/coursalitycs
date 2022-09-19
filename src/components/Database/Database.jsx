@@ -18,7 +18,18 @@ export const Database = () => {
               </Button>
             </div>
 
-            <div className={s.right}>asd</div>
+            <div className={s.right}>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+              <div className={s.item}></div>
+            </div>
           </div>
         </div>
       </div>

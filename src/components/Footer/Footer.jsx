@@ -1,7 +1,7 @@
-import s from "./Footer.module.scss"
-import { Button, Input } from "../../ui/index"
-import Link from "next/link"
-import { Socials } from "../Socials/Socials"
+import s from "./Footer.module.scss";
+import { Button, Input } from "../../ui/index";
+import Link from "next/link";
+import { Socials } from "../Socials/Socials";
 
 export const Footer = () => {
   return (
@@ -28,7 +28,9 @@ export const Footer = () => {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <Link href="/experts">Experts’ booking</Link>
+                  <Link href="https://coursalytics.com/experts-booking">
+                    Experts’ booking
+                  </Link>
                 </li>
 
                 <li>
@@ -114,5 +116,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};

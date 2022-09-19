@@ -1,14 +1,14 @@
-import s from "./Faq.module.scss"
-import { Accordition, AccorditionItem, Title } from "../../ui"
-import cn from "classnames"
-import ChevronIcon from "./chevron.svg"
+import s from "./Faq.module.scss";
+import { Accordition, AccorditionItem, Title } from "../../ui";
+import cn from "classnames";
+import ChevronIcon from "./chevron.svg";
 import {
   Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
   AccordionItemPanel,
-} from "react-accessible-accordion"
+} from "react-accessible-accordion";
 
 export const Faq = ({ data }) => {
   return (
@@ -18,19 +18,7 @@ export const Faq = ({ data }) => {
           Questions and answers
         </Title>
 
-        {/*  <div className={s.accordeon}>
-          <Accordition>
-            {data.map((item) => (
-              <AccorditionItem
-                key={item.id}
-                title={item.title}
-                content={item.content}
-              />
-            ))}
-          </Accordition> */}
-        {/* </div> */}
-
-        <Accordion>
+        <Accordion allowMultipleExpanded={true} allowZeroExpanded={true}>
           {data.map((item) => (
             <AccordionItem key={item.id} className={s.item}>
               <AccordionItemHeading className={s.title}>
@@ -47,5 +35,5 @@ export const Faq = ({ data }) => {
         </Accordion>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,22 +1,22 @@
-import s from "./Socials.module.scss"
+import s from "./Socials.module.scss";
 
-import Link from "next/link"
+import Link from "next/link";
 
-import FbIcon from "./Facebook.svg"
-import TgIcon from "./Telegram.svg"
-import TwIcon from "./Twitter.svg"
+import FbIcon from "./Facebook.svg";
+import LiIcon from "./in.svg";
+import IgIcon from "./ig.svg";
 
 export const Socials = () => {
   return (
     <div className={s.wrap}>
       <Link href="https://instagram.com/coursalytics">
         <a target="_blank">
-          <TwIcon />
+          <IgIcon />
         </a>
       </Link>
       <Link href="https://www.linkedin.com/company/coursalytics">
         <a target="_blank">
-          <TgIcon />
+          <LiIcon />
         </a>
       </Link>
       <Link href="https://facebook.com/coursalytics/">
@@ -25,5 +25,5 @@ export const Socials = () => {
         </a>
       </Link>
     </div>
-  )
-}
+  );
+};

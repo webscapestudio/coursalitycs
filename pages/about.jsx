@@ -1,21 +1,21 @@
-import Head from "next/head"
-import MainLayout from "../src/layouts/MainLayout"
-import { Button, Title } from "../src/ui"
-import s from "./about.module.scss"
-import About from "../public/img/about.png"
-import Image from "next/image"
-import ArrowIcon from "../public/img/examples/arrow.svg"
-import DataIcon from "../public/img/examples/data.svg"
-import ListIcon from "../public/img/examples/list.svg"
-import PenIcon from "../public/img/examples/pen.svg"
-import UsersIcon from "../public/img/examples/users.svg"
+import Head from "next/head";
+import MainLayout from "../src/layouts/MainLayout";
+import { Button, Title } from "../src/ui";
+import s from "./about.module.scss";
+import About from "../public/img/about.png";
+import Image from "next/image";
+import ArrowIcon from "../public/img/examples/arrow.svg";
+import DataIcon from "../public/img/examples/data.svg";
+import ListIcon from "../public/img/examples/list.svg";
+import PenIcon from "../public/img/examples/pen.svg";
+import UsersIcon from "../public/img/examples/users.svg";
 import {
   Callback,
   CoursesSlider,
   Examples,
   HowItWorks,
   WeServe,
-} from "../src/components"
+} from "../src/components";
 
 export default function AboutPage() {
   const hiwdata = [
@@ -23,7 +23,7 @@ export default function AboutPage() {
     { id: 2, num: "6", title: `Сountries of team members` },
     { id: 3, num: "3000+", title: "People trained" },
     { id: 4, num: "200+", title: "Client engagements completed" },
-  ]
+  ];
 
   const examplesdata = [
     {
@@ -54,7 +54,7 @@ export default function AboutPage() {
       title: "1-day live online seminar",
       text: "with an expert in cross-cultural communication for a national oil company",
     },
-  ]
+  ];
   return (
     <>
       <Head>
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div className={s.left}>
                 <Title tag="h1" className={s.title}>
                   <span>Coursalytics</span> is an Executive Education
-                  marketplace making it
+                  marketplace making it{" "}
                   <span>easy to find, compare, and book </span> executive
                   programs and individual experts time for meetings live online
                   and in-person <span>all over the world</span>
@@ -121,5 +121,5 @@ export default function AboutPage() {
         </section>
       </MainLayout>
     </>
-  )
+  );
 }

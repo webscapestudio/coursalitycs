@@ -1,14 +1,14 @@
-import s from "./HelpToEnroll.module.scss"
-import { Title } from "../../ui"
-import Check from "./check.svg"
-import cn from "classnames"
+import s from "./HelpToEnroll.module.scss";
+import { Title } from "../../ui";
+import Check from "./check.svg";
+import cn from "classnames";
 
 export const HelpToEnroll = () => {
   return (
     <section className={s.section}>
       <div className="container">
         <Title tag="h2" className={s.title}>
-          We <span>help to enroll</span> in long-term and short-term programs in
+          We <span>help to enroll</span> in long-term and short-term programs in{" "}
           <span>various fields:</span> from business to medicine
         </Title>
         <div className={s.wrap}>
@@ -47,5 +47,5 @@ export const HelpToEnroll = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

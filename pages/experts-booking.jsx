@@ -161,7 +161,7 @@ export default function Experts() {
         <section className={s.hero}>
           <div className="container">
             <Title tag="h1" className={s.hero__title}>
-              Find a <span>perfect expert</span> to help you and your team
+              Find a <span>perfect expert</span> to help you and your team{" "}
               <span>understand</span> new trends, <span>learn</span> best
               practices and <span>improve</span> decision making and execution
             </Title>
@@ -176,7 +176,11 @@ export default function Experts() {
           </div>
         </section>
 
-        <HowItWorks data={howData} />
+        <HowItWorks
+          data={howData}
+          // eslint-disable-next-line react/jsx-key
+          title={["How it", " ", <span>works</span>]}
+        />
 
         <Combination />
 

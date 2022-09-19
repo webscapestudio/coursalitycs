@@ -1,23 +1,23 @@
-import cn from "classnames"
-import Head from "next/head"
-import Image from "next/image"
-import MainLayout from "../src/layouts/MainLayout"
-import { Button, SliderArrow, Title } from "../src/ui"
-import s from "./index.module.scss"
-import billy from "./billy.png"
-import CalendarIcon from "../public/img/calendar.svg"
-import MailIcon from "../public/img/mail.svg"
-import SearchIcon from "../public/img/search.svg"
-import HeroUserImage from "../public/img/hero_user.jpg"
+import cn from "classnames";
+import Head from "next/head";
+import Image from "next/image";
+import MainLayout from "../src/layouts/MainLayout";
+import { Button, SliderArrow, Title } from "../src/ui";
+import s from "./index.module.scss";
+import billy from "./billy.png";
+import CalendarIcon from "../public/img/calendar.svg";
+import MailIcon from "../public/img/mail.svg";
+import SearchIcon from "../public/img/search.svg";
+import HeroUserImage from "../public/img/hero_user.jpg";
 
-import DigitalIcon from "../public/img/topics/digital.svg"
-import FinanceIcon from "../public/img/topics/finance.svg"
-import HumanIcon from "../public/img/topics/human.svg"
-import LeadershipIcon from "../public/img/topics/leadership.svg"
-import MarketingIcon from "../public/img/topics/marking.svg"
-import NegotiationsIcon from "../public/img/topics/negotiations.svg"
-import StrategyIcon from "../public/img/topics/strategy.svg"
-import WomanIcon from "../public/img/topics/woman.svg"
+import DigitalIcon from "../public/img/topics/digital.svg";
+import FinanceIcon from "../public/img/topics/finance.svg";
+import HumanIcon from "../public/img/topics/human.svg";
+import LeadershipIcon from "../public/img/topics/leadership.svg";
+import MarketingIcon from "../public/img/topics/marking.svg";
+import NegotiationsIcon from "../public/img/topics/negotiations.svg";
+import StrategyIcon from "../public/img/topics/strategy.svg";
+import WomanIcon from "../public/img/topics/woman.svg";
 
 import {
   Callback,
@@ -33,20 +33,20 @@ import {
   Faq,
   CoursesSlider,
   ExpertsSlider,
-} from "../src/components"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Navigation } from "swiper"
-import { useRef } from "react"
-import ExpertImage from "../public/img/expert.jpg"
-import Reviews1 from "../public/img/reviews/1.jpg"
-import Reviews2 from "../public/img/reviews/2.jpg"
-import Reviews3 from "../public/img/reviews/3.jpg"
-import { useEffect } from "react"
-import axios from "axios"
-import { useState } from "react"
+} from "../src/components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation } from "swiper";
+import { useRef } from "react";
+import ExpertImage from "../public/img/expert.jpg";
+import Reviews1 from "../public/img/reviews/1.jpg";
+import Reviews2 from "../public/img/reviews/2.jpg";
+import Reviews3 from "../public/img/reviews/3.jpg";
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 
 export default function Home({ topics, experts }) {
-  const expertsData = experts
+  const expertsData = experts;
   // console.log(topics.groups, "topics")
 
   const topicsData = [
@@ -106,7 +106,7 @@ export default function Home({ topics, experts }) {
       img: <NegotiationsIcon />,
       text: "Over 150 topics",
     },
-  ]
+  ];
 
   const reviewsData = [
     {
@@ -130,7 +130,7 @@ export default function Home({ topics, experts }) {
       text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
       img: Reviews3,
     },
-  ]
+  ];
 
   const faqData = [
     {
@@ -165,9 +165,9 @@ export default function Home({ topics, experts }) {
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
-  ]
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+  ];
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
 
   return (
     <>
@@ -304,17 +304,17 @@ export default function Home({ topics, experts }) {
         </main>
       </MainLayout>
     </>
-  )
+  );
 }
 
 export async function getServerSideProps() {
   const res = await axios.get(
     `https://ca-production.coursalytics.com/api/homepage/popular_courses`
-  )
+  );
   const expRes = await axios.get(
     "https://ca-production.coursalytics.com/api/homepage/experts"
-  )
-  const topics = await res.data
-  const experts = await expRes.data
-  return { props: { topics, experts } }
+  );
+  const topics = await res.data;
+  const experts = await expRes.data;
+  return { props: { topics, experts } };
 }

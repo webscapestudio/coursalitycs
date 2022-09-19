@@ -1,8 +1,8 @@
-import { Title } from "../../ui"
-import s from "./PriceDepend.module.scss"
-import Billy from "./billy.png"
-import Image from "next/image"
-import Chevron from "./chevron.svg"
+import { Title } from "../../ui";
+import s from "./PriceDepend.module.scss";
+import Billy from "./billy.png";
+import Image from "next/image";
+import Chevron from "./chevron.svg";
 
 export const PriceDepend = () => {
   return (
@@ -22,7 +22,7 @@ export const PriceDepend = () => {
               <div className={s.item__info}>
                 <h4>Your budget</h4>
                 <p>
-                  First of all, we focus on your request and conditions. That`s
+                  First of all, we focus on your request and conditions. That's
                   why we analyze and compare costs based on the figures you have
                   set.
                 </p>
@@ -36,7 +36,9 @@ export const PriceDepend = () => {
                 <p>
                   Executive education is a very fragmented and intransparent
                   market where expert fees can range from USD 200 per hour to
-                  USD 200,000 per hour
+                  USD 200,000 per hour, depending on the expert background,
+                  client profile, type of engagement, amount of necessary
+                  preparation and customization etc.
                 </p>
               </div>
             </div>
@@ -47,7 +49,9 @@ export const PriceDepend = () => {
                 <h4>Logistics </h4>
                 <p>
                   We cooperate with experts from all over the world and are
-                  ready to help with both online and face-to-face learning.
+                  ready to help with both online and face-to-face learning. This
+                  means that logistics costs can also affect the cost of the
+                  service if you choose the in-person format.
                 </p>
               </div>
             </div>
@@ -55,5 +59,5 @@ export const PriceDepend = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

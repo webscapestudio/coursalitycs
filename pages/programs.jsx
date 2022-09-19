@@ -1,5 +1,5 @@
-import Head from "next/head"
-import ReactTypingEffect from "react-typing-effect"
+import Head from "next/head";
+import ReactTypingEffect from "react-typing-effect";
 import {
   CallbackSmall,
   CoursesSlider,
@@ -12,26 +12,26 @@ import {
   Reviews,
   ReviewsSection,
   TextLine,
-} from "../src/components"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Navigation } from "swiper"
-import MainLayout from "../src/layouts/MainLayout"
-import { Button, SliderArrow, Title } from "../src/ui"
-import s from "./programs.module.scss"
-import { useRef } from "react"
-import cn from "classnames"
-import ArrowIcon from "../public/img/examples/arrow.svg"
-import DataIcon from "../public/img/examples/data.svg"
-import ListIcon from "../public/img/examples/list.svg"
-import PenIcon from "../public/img/examples/pen.svg"
-import UsersIcon from "../public/img/examples/users.svg"
-import Reviews1 from "../public/img/reviews/1.jpg"
-import Reviews2 from "../public/img/reviews/2.jpg"
-import Reviews3 from "../public/img/reviews/3.jpg"
+} from "../src/components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation } from "swiper";
+import MainLayout from "../src/layouts/MainLayout";
+import { Button, SliderArrow, Title } from "../src/ui";
+import s from "./programs.module.scss";
+import { useRef } from "react";
+import cn from "classnames";
+import ArrowIcon from "../public/img/examples/arrow.svg";
+import DataIcon from "../public/img/examples/data.svg";
+import ListIcon from "../public/img/examples/list.svg";
+import PenIcon from "../public/img/examples/pen.svg";
+import UsersIcon from "../public/img/examples/users.svg";
+import Reviews1 from "../public/img/reviews/1.jpg";
+import Reviews2 from "../public/img/reviews/2.jpg";
+import Reviews3 from "../public/img/reviews/3.jpg";
 
 export default function Programs() {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   const infoCards = [
     {
       id: 1,
@@ -69,7 +69,7 @@ export default function Programs() {
       map: "New York, United States",
       date: "Jul 11—22, 2022",
     },
-  ]
+  ];
   const howData = [
     {
       id: 1,
@@ -89,7 +89,7 @@ export default function Programs() {
       title:
         "Let us take over the organization of your admission (except what can't be done without you)",
     },
-  ]
+  ];
 
   const examplesData = [
     {
@@ -133,7 +133,7 @@ export default function Programs() {
       title: "1-hour foresight session",
       text: "with a leading future scenario planning thinker for a global metals and mining company",
     },
-  ]
+  ];
 
   const reviewsData = [
     {
@@ -157,7 +157,7 @@ export default function Programs() {
       text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
       img: Reviews3,
     },
-  ]
+  ];
 
   const faqData = [
     {
@@ -192,7 +192,7 @@ export default function Programs() {
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
-  ]
+  ];
   return (
     <>
       <Head>
@@ -206,10 +206,16 @@ export default function Programs() {
             <Title tag="h1" className={s.hero__title}>
               Selection and booking of executive programs offered by <br />{" "}
               <ReactTypingEffect
-                speed={100}
-                eraseDelay={300}
+                speed={50}
+                typingDelay={100}
+                eraseDelay={100}
                 className={s.typing}
-                text={["top business schools", "top business schools"]}
+                text={[
+                  "top business schools",
+                  "non-university providers",
+                  "schools of public administration",
+                  "law schools",
+                ]}
               />{" "}
               <br />
               all over the world
@@ -217,7 +223,7 @@ export default function Programs() {
           </div>
         </section>
 
-        <HowItWorks data={howData} />
+        <HowItWorks data={howData} title={["How", <span> it works</span>]} />
 
         <HelpToEnroll />
 
@@ -236,5 +242,5 @@ export default function Programs() {
         <Faq data={faqData} />
       </MainLayout>
     </>
-  )
+  );
 }

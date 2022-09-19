@@ -1,30 +1,30 @@
-import cn from "classnames"
-import s from "./Header.module.scss"
-import Link from "next/link"
-import LogoIcon from "./logo.svg"
-import { HeaderLink, Input } from "../../ui"
-import ExpertsIcon from "./icons/experts.svg"
-import ProgramsIcon from "./icons/programs.svg"
-import CustomizedIcon from "./icons/customized.svg"
-import LoupeIcon from "./icons/loupe.svg"
+import cn from "classnames";
+import s from "./Header.module.scss";
+import Link from "next/link";
+import LogoIcon from "./logo.svg";
+import { HeaderLink, Input } from "../../ui";
+import ExpertsIcon from "./icons/experts.svg";
+import ProgramsIcon from "./icons/programs.svg";
+import CustomizedIcon from "./icons/customized.svg";
+import LoupeIcon from "./icons/loupe.svg";
 
-import DigitalIcon from "../../../public/img/topics/digital.svg"
-import FinanceIcon from "../../../public/img/topics/finance.svg"
-import HumanIcon from "../../../public/img/topics/human.svg"
-import LeadershipIcon from "../../../public/img/topics/leadership.svg"
-import MarketingIcon from "../../../public/img/topics/marking.svg"
-import NegotiationsIcon from "../../../public/img/topics/negotiations.svg"
-import StrategyIcon from "../../../public/img/topics/strategy.svg"
-import WomanIcon from "../../../public/img/topics/woman.svg"
-import { useState } from "react"
+import DigitalIcon from "../../../public/img/topics/digital.svg";
+import FinanceIcon from "../../../public/img/topics/finance.svg";
+import HumanIcon from "../../../public/img/topics/human.svg";
+import LeadershipIcon from "../../../public/img/topics/leadership.svg";
+import MarketingIcon from "../../../public/img/topics/marking.svg";
+import NegotiationsIcon from "../../../public/img/topics/negotiations.svg";
+import StrategyIcon from "../../../public/img/topics/strategy.svg";
+import WomanIcon from "../../../public/img/topics/woman.svg";
+import { useState } from "react";
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const links = [
     {
       id: 1,
       title: "Services",
-      link: "#",
+      link: "#!",
       sub: [
         {
           id: 1,
@@ -55,7 +55,7 @@ export const Header = () => {
     {
       id: 2,
       title: "Topics",
-      link: "#",
+      link: "#!",
       subTopics: [
         {
           id: 1,
@@ -118,16 +118,16 @@ export const Header = () => {
     { id: 3, title: "Courses", link: "/courses" },
     { id: 4, title: "Experts", link: "/experts" },
     { id: 5, title: "About us", link: "/about" },
-  ]
+  ];
 
   const showMenu = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
     if (!isOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "";
     }
-  }
+  };
   return (
     <header className={cn(s.header)}>
       <div className="container">
@@ -168,5 +168,5 @@ export const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
