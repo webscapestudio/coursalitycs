@@ -12,7 +12,7 @@ $ npm install
 $ npm run build
 ```
 
-#### Запуст проекта
+#### Запуск проекта
 
 ```bash
 $ npm run start
