@@ -223,6 +223,7 @@ export default function Programs() {
           </div>
         </section>
 
+
         <HowItWorks data={howData} title={["How", <span> it works</span>]} />
 
         <HelpToEnroll />
