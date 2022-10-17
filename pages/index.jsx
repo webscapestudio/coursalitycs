@@ -49,7 +49,7 @@ export default function Home({ topics, experts }) {
   const expertsData = experts;
   // console.log(topics.groups, "topics")
 
-  const topicsData = [
+  const topicsData = [   
     {
       id: 1,
       title: "Strategy",
