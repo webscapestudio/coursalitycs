@@ -17,7 +17,6 @@ import {
   HowItWorks,
   PriceDepend,
   Reviews,
-  ReviewsSection,
   TabsComponent,
   TextLine,
 } from "../src/components"
@@ -56,7 +55,6 @@ export default function Experts() {
       title: "A series of 30+ thought leadership seminars",
       text: "by top professors on business topics of importance in the post-COVID-19 world for an omni-channel media holding",
     },
-
     {
       id: 2,
       icon: ListIcon,
@@ -64,21 +62,18 @@ export default function Experts() {
         "4-hour workshop with an artificial intelligence C-level practitioner",
       text: "from a billion-dollar corporation for one of the largest mining companies",
     },
-
     {
       id: 3,
       icon: DataIcon,
       title: "A series of 4 four-hour live online seminars",
       text: "on HR Innovation with educators from top US business schools for a leading media company",
     },
-
     {
       id: 4,
       icon: UsersIcon,
       title: "1-day live online seminar",
       text: "with an expert in cross-cultural communication for a national oil company",
     },
-
     {
       id: 5,
       icon: UsersIcon,
