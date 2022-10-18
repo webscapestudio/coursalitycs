@@ -12,6 +12,10 @@
 .motion {
   max-width: 840px;
   margin: 60px auto 0;
+  svg {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {

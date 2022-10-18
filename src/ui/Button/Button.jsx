@@ -10,7 +10,6 @@ export const Button = ({
   rounded,
   className,
   children,
-  ...props
 }) => {
   if (link) {
     return (

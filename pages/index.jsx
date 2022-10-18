@@ -22,10 +22,7 @@ import WomanIcon from "../public/img/topics/woman.svg";
 import {
   Callback,
   CallbackSmall,
-  IndexCard,
-  IndexExpert,
   Reviews,
-  Tabs,
   TabsComponent,
   TextLine,
   Topics,
@@ -34,22 +31,15 @@ import {
   CoursesSlider,
   ExpertsSlider,
 } from "../src/components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper";
-import { useRef } from "react";
-import ExpertImage from "../public/img/expert.jpg";
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
-import { useEffect } from "react";
 import axios from "axios";
-import { useState } from "react";
 
-export default function Home({ topics, experts }) {
+export default function Home({  experts }) {
   const expertsData = experts;
-  // console.log(topics.groups, "topics")
 
-  const topicsData = [   
+  const topicsData = [
     {
       id: 1,
       title: "Strategy",
@@ -166,8 +156,6 @@ export default function Home({ topics, experts }) {
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
   ];
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
 
   return (
     <>
@@ -303,6 +291,7 @@ export default function Home({ topics, experts }) {
           <Faq data={faqData} />
         </main>
       </MainLayout>
+
     </>
   );
 }

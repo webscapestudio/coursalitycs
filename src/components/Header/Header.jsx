@@ -24,7 +24,7 @@ export const Header = () => {
     {
       id: 1,
       title: "Services",
-      link: "#!",
+      link: "#",
       sub: [
         {
           id: 1,
@@ -55,7 +55,7 @@ export const Header = () => {
     {
       id: 2,
       title: "Topics",
-      link: "#!",
+      link: "#",
       subTopics: [
         {
           id: 1,
@@ -116,7 +116,7 @@ export const Header = () => {
       ],
     },
     { id: 3, title: "Courses", link: "/courses" },
-    { id: 4, title: "Experts", link: "/experts" },
+    { id: 4, title: "Experts", link: "/experts-booking" },
     { id: 5, title: "About us", link: "/about" },
   ];
 
