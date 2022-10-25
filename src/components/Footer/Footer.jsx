@@ -17,9 +17,7 @@ export const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="https://coursalytics.com/publications/privacy-policy">
-                    Privacy
-                  </Link>
+                  <Link href="/privacy-policy">Privacy</Link>
                 </li>
               </ul>
             </div>
@@ -34,15 +32,21 @@ export const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="/programs">Executive programs</Link>
+                  <Link href="https://coursalytics.com/executive-programs">
+                    Executive programs
+                  </Link>
                 </li>
 
                 <li>
-                  <Link href="/programs">Customized programs</Link>
+                  <Link href="https://coursalytics.com/customized-programs">
+                    Customized programs
+                  </Link>
                 </li>
 
                 <li>
-                  <Link href="/analytics">Research & Analytics</Link>
+                  <Link href="https://coursalytics.com/research-and-analytics">
+                    Research & Analytics
+                  </Link>
                 </li>
               </ul>
             </div>

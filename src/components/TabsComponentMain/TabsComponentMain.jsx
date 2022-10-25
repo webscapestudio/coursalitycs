@@ -6,34 +6,34 @@ import "react-tabs/style/react-tabs.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export const TabsComponent = () => {
+export const TabsComponentMain = () => {
   const tabs = [
     {
       id: 1,
-      title: "Choose from an extensive database of experts",
-      text: "Among tens of thousands of practitioners whose professional experience and leadership potential we track and analyze, our team always finds a person exactly for your request and task.",
-      link: "/",
+      title: "Experts’ booking",
+      text: "For in-house executive development programs, workshops, seminars and one-on-one consultations.",
+      link: "https://coursalytics.com/experts-booking",
       linkText: "Learn more",
     },
     {
       id: 2,
-      title: "Get to know the expert personally",
-      text: "We appreciate the trusting relationship between you and the expert. That's why we are not only looking for a candidate, but also provide you with all the necessary contacts and introduce you to them personally.",
-      link: "/",
+      title: "Executive programs",
+      text: "Selection and booking of executive programs offered by top business schools and non-university providers all over the world.",
+      link: "https://coursalytics.com/executive-programs",
       linkText: "Learn more",
     },
     {
       id: 3,
-      title: "Stay informed throughout the process",
-      text: "Our team keeps in touch with you throughout the entire process. Written communication or online meetings – we are always ready to answer your questions.",
-      link: "/",
+      title: "Customized programs",
+      text: "Development and delivery of customized live online programs for top managers led by world-leading educators and expert practitioners.",
+      link: "https://coursalytics.com/customized-programs",
       linkText: "Learn more",
     },
     {
       id: 4,
-      title: "Pay only for what your team needs",
-      text: "We ensure the quality at the level of the leading executive education players for half the cost: you only pay for the experts’ time.",
-      link: "/",
+      title: "Research & Analytics",
+      text: "Design and execution of quantitative and qualitative education research projects for corporate clients and leading international business education providers.",
+      link: "https://coursalytics.com/research-and-analytics",
       linkText: "Learn more",
     },
   ];
@@ -56,9 +56,9 @@ export const TabsComponent = () => {
             <h3 className={s.tab__title}>{item.title}</h3>
             <div className={s.hidden}>
               <p>{item.text}</p>
-              {/* <Link href={item.link}>
+              <Link href={item.link}>
                 <a className={s.link}>{item.linkText}</a>
-              </Link> */}
+              </Link>
             </div>
           </Tab>
         ))}

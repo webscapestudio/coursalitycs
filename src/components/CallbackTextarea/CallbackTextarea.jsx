@@ -1,10 +1,10 @@
 import Image from "next/image";
 import s from "./Callback.module.scss";
 import Billy from "./billy.png";
-import { Button, Checkbox, Input, Title } from "../../ui";
+import { Button, Checkbox, Input, Textarea, Title } from "../../ui";
 import Link from "next/link";
 
-export const Callback = () => {
+export const CallbackTextarea = () => {
   return (
     <div className={s.callback}>
       <div className={s.wrap}>
@@ -24,6 +24,7 @@ export const Callback = () => {
           <form action="">
             <Input className={s.input} placeholder="Full name" />
             <Input className={s.input} placeholder="Email" type="email" />
+            <Textarea className={s.input} placeholder="Your question" />
             <div className={s.policy}>
               <Checkbox />
               <p>

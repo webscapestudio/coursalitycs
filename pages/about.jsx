@@ -11,6 +11,7 @@ import PenIcon from "../public/img/examples/pen.svg";
 import UsersIcon from "../public/img/examples/users.svg";
 import {
   Callback,
+  CallbackTextarea,
   CoursesSlider,
   Examples,
   HowItWorks,
@@ -29,30 +30,29 @@ export default function AboutPage() {
     {
       id: 1,
       icon: ArrowIcon,
-      title: "A series of 30+ thought leadership seminars",
-      text: "by top professors on business topics of importance in the post-COVID-19 world for an omni-channel media holding",
+      title: "Impact & Commitment",
+      text: "We are committed to delivering real-world impact and improving the quality of global education.",
     },
 
     {
       id: 2,
       icon: ListIcon,
-      title:
-        "4-hour workshop with an artificial intelligence C-level practitioner",
-      text: "from a billion-dollar corporation for one of the largest mining companies",
+      title: "Innovation & Curiosity",
+      text: "We are constantly striving to learn new things and always remain curious and open to innovative approaches and technological innovations.",
     },
 
     {
       id: 3,
       icon: DataIcon,
-      title: "A series of 4 four-hour live online seminars",
-      text: "on HR Innovation with educators from top US business schools for a leading media company",
+      title: "Professionalism & Expertise",
+      text: "Сustomers’ success directly depends on the professionalism of the team, so we are dedicated to developing our expertise all the time.",
     },
 
     {
       id: 4,
       icon: UsersIcon,
-      title: "1-day live online seminar",
-      text: "with an expert in cross-cultural communication for a national oil company",
+      title: "Trust & Openness",
+      text: "We believe that trusting and open relationships both within the team and with our customers and partners are essential for successful collaboration.",
     },
   ];
   return (
@@ -73,13 +73,10 @@ export default function AboutPage() {
                   programs and individual experts time for meetings live online
                   and in-person <span>all over the world</span>
                 </Title>
-                {/* 
+
                 <div className={s.btns}>
                   <Button className={s.btn}>Request a demo</Button>
-                  <Button className={s.btn} style="accent">
-                    Contact us
-                  </Button>
-                </div> */}
+                </div>
               </div>
 
               <div className={s.right}>
@@ -116,7 +113,7 @@ export default function AboutPage() {
 
         <section id="cb" className={s.callback}>
           <div className="container">
-            <Callback />
+            <CallbackTextarea />
           </div>
         </section>
       </MainLayout>

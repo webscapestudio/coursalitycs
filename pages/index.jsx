@@ -30,69 +30,70 @@ import {
   Faq,
   CoursesSlider,
   ExpertsSlider,
+  TabsComponentMain,
 } from "../src/components";
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
 import axios from "axios";
 
-export default function Home({  experts }) {
+export default function Home({ experts }) {
   const expertsData = experts;
 
   const topicsData = [
     {
       id: 1,
       title: "Strategy",
-      link: "/",
+      link: "https://coursalytics.com/topics/strategy",
       img: <StrategyIcon />,
       text: "Over 150 topics",
     },
     {
       id: 2,
       title: "Women Leadership",
-      link: "/",
+      link: "https://coursalytics.com/topics/women-leadership",
       img: <WomanIcon />,
       text: "Over 150 topics",
     },
     {
       id: 3,
       title: " Leadership",
-      link: "/",
+      link: "https://coursalytics.com/topics/leadership",
       img: <LeadershipIcon />,
       text: "Over 150 topics",
     },
     {
       id: 4,
       title: "Marketing",
-      link: "/",
+      link: "https://coursalytics.com/topics/marketing",
       img: <MarketingIcon />,
       text: "Over 150 topics",
     },
     {
       id: 5,
       title: "Human Capital",
-      link: "/",
+      link: "https://coursalytics.com/topics/human-capital-management",
       img: <HumanIcon />,
       text: "Over 150 topics",
     },
     {
       id: 6,
       title: "Digital Transformation",
-      link: "/",
+      link: "https://coursalytics.com/topics/digital-transformation",
       img: <DigitalIcon />,
       text: "Over 150 topics",
     },
     {
       id: 7,
       title: "Finance",
-      link: "/",
+      link: "https://coursalytics.com/topics/finance",
       img: <FinanceIcon />,
       text: "Over 150 topics",
     },
     {
       id: 8,
       title: "Negotiations",
-      link: "/",
+      link: "https://coursalytics.com/topics/negotiations",
       img: <NegotiationsIcon />,
       text: "Over 150 topics",
     },
@@ -108,16 +109,16 @@ export default function Home({  experts }) {
     },
     {
       id: 2,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Women’s Executive Leadership Program at Berkeley",
+      name: "Not-for-profit organization leader from North America",
+      text: "Personal leadership style evaluations from peers, employers, direct-reports, etc., provided in advance allowed the faculty to provide very tailored feedback to individuals. Extremely helpful!",
       img: Reviews2,
     },
     {
       id: 3,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Advanced Management Program at Wharton",
+      name: "C-level executive of a multibillion IT corporation headquartered in India",
+      text: "Most of us usually stick to a single industry. I certainly did. At Wharton there were people from a very diverse set of industries. Meeting them made me realise that there is a world outside banking as well.",
       img: Reviews3,
     },
   ];
@@ -179,8 +180,15 @@ export default function Home({  experts }) {
                 </p>
 
                 <div className={s.hero__btn}>
-                  <Button link="/experts">Search Experts</Button>
-                  <Button style="accent">Browse Courses</Button>
+                  <Button link="https://coursalytics.com/experts-catalog">
+                    Search Experts
+                  </Button>
+                  <Button
+                    style="accent"
+                    link="https://coursalytics.com/courses"
+                  >
+                    Browse Courses
+                  </Button>
                 </div>
 
                 <div className={s.hero__info}>
@@ -208,8 +216,8 @@ export default function Home({  experts }) {
                   <div className={s.hero__info_item}>
                     <CalendarIcon />
                     <div className={s.info}>
-                      <h4>240k</h4>
-                      <p>Assisted Student</p>
+                      <h4>50k+ </h4>
+                      <p>faculty profiles</p>
                     </div>
                   </div>
 
@@ -242,12 +250,15 @@ export default function Home({  experts }) {
           <section className={s.tabs}>
             <div className="container">
               <Title tag="h2" className={s.tabs__title}>
-                One-stop shop for all <span>your executive </span> <br />{" "}
-                education needs
+                One-stop shop for all your{" "}
+                <span>
+                  executive <br /> education
+                </span>{" "}
+                needs
               </Title>
 
               <div className={s.tabs__wrap}>
-                <TabsComponent />
+                <TabsComponentMain />
               </div>
             </div>
           </section>
@@ -291,7 +302,6 @@ export default function Home({  experts }) {
           <Faq data={faqData} />
         </main>
       </MainLayout>
-
     </>
   );
 }
@@ -304,6 +314,7 @@ export async function getServerSideProps() {
     "https://ca-production.coursalytics.com/api/homepage/experts"
   );
   const topics = await res.data;
+
   const experts = await expRes.data;
   return { props: { topics, experts } };
 }

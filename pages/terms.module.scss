@@ -4,6 +4,13 @@
   padding-top: 120px;
 }
 
+.subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 16px;
+}
+
 .wrap {
   margin-top: 60px;
   max-width: 865px;
@@ -71,6 +78,30 @@
   line-height: 22px;
   &:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+.info__list {
+  margin-top: 16px;
+  li {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: #383838;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 5px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 

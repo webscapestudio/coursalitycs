@@ -1,6 +1,6 @@
-import cn from "classnames"
-import { Button, Title } from "../../ui"
-import s from "./CallbackSmall.module.scss"
+import cn from "classnames";
+import { Button, Title } from "../../ui";
+import s from "./CallbackSmall.module.scss";
 
 export const CallbackSmall = ({ className }) => {
   return (
@@ -8,8 +8,8 @@ export const CallbackSmall = ({ className }) => {
       <div className="container-full">
         <div className={s.wrap}>
           <Title tag="h2" className={s.title}>
-            Build your own learning experience by <span>booking experts</span>{" "}
-            <br /> and <span>customizing programs</span>
+            Tell us about your business goals, objectives, and expectations and
+            we will find the best learning option for you.
           </Title>
 
           <Button style="accent" link="#quiz" className={s.btn}>
@@ -18,5 +18,5 @@ export const CallbackSmall = ({ className }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

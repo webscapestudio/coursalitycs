@@ -32,10 +32,7 @@
     line-height: 16px;
     color: $white;
     border: none;
-  }
-  &:hover {
-    background: $text;
-    color: $white;
+    cursor: auto;
   }
 
   &.sm {

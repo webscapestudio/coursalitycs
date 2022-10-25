@@ -1,9 +1,9 @@
-import { Title } from "../../ui"
-import s from "./WeServe.module.scss"
-import Img1 from "./1.jpg"
-import Img2 from "./2.jpg"
-import Img3 from "./3.jpg"
-import Image from "next/image"
+import { Title } from "../../ui";
+import s from "./WeServe.module.scss";
+import Img1 from "./1.jpg";
+import Img2 from "./2.jpg";
+import Img3 from "./3.jpg";
+import Image from "next/image";
 
 export const WeServe = () => {
   const data = [
@@ -12,11 +12,11 @@ export const WeServe = () => {
       image: Img1,
       title: "Corporations and government agencies",
       list: [
-        "Fast access to expertise: get leading experts to work with    your senior team",
-        "Cost minimization: pay only for what your team needs",
-        "Tailored expert selection",
-        "Individual learning trajectories for senior team members",
-        "Assistance on interaction with universities, business schools and other education providers",
+        "Fast access to expertise: get leading experts to work with your senior team.",
+        "Cost minimization: pay only for what your team needs.",
+        "Tailored expert selection.",
+        "Individual learning trajectories for senior team members.",
+        "Assistance on interaction with universities, business schools and other education providers.",
       ],
     },
     {
@@ -34,12 +34,12 @@ export const WeServe = () => {
       image: Img3,
       title: "Individuals",
       list: [
-        "Get individual advice about life-long learning based on your educational and professional experience, linguistic and/or cultural preferences",
+        "Get individual advice about life-long learning based on your educational and professional experience, linguistic and/or cultural preferences.",
         "Educational concierge service: search and selection of educational programs, organization of admission, assistance in travel and accommodation, personal consultations.",
-        "Individual search for coaches/mentors",
+        "Individual search for coaches/mentors.",
       ],
     },
-  ]
+  ];
 
   return (
     <section className={s.section}>
@@ -67,5 +67,5 @@ export const WeServe = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

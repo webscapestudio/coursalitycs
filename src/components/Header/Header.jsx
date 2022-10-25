@@ -35,13 +35,13 @@ export const Header = () => {
         {
           id: 2,
           link: "/programs-exlusive",
-          title: "Experts booking",
+          title: "Executive programs",
           icon: <ProgramsIcon />,
         },
         {
           id: 3,
           link: "/programs-customized",
-          title: "Experts booking",
+          title: "Customized programs",
           icon: <CustomizedIcon />,
         },
         {
@@ -106,13 +106,7 @@ export const Header = () => {
           icon: <FinanceIcon />,
           text: "Over 150 topics",
         },
-        {
-          id: 8,
-          title: "Negotiations",
-          link: "/",
-          icon: <NegotiationsIcon />,
-          text: "Over 150 topics",
-        },
+    
       ],
     },
     { id: 3, title: "Courses", link: "/courses" },

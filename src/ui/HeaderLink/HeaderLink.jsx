@@ -1,8 +1,9 @@
-import cn from "classnames"
-import Link from "next/link"
-import useOutsideClick from "../../hooks/useOutsideClick"
-import s from "./HeaderLink.module.scss"
-import Chevron from "./chevron.svg"
+import cn from "classnames";
+import Link from "next/link";
+import useOutsideClick from "../../hooks/useOutsideClick";
+import s from "./HeaderLink.module.scss";
+import Chevron from "./chevron.svg";
+import { Button } from "../Button/Button";
 
 export const HeaderLink = ({
   children,
@@ -12,10 +13,15 @@ export const HeaderLink = ({
   subTopics,
   ...props
 }) => {
-  let { ref, isOpen, setIsOpen } = useOutsideClick(false)
+  let { ref, isOpen, setIsOpen } = useOutsideClick(false);
   const openMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    console.log(isOpen);
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
@@ -27,7 +33,7 @@ export const HeaderLink = ({
           })}
           {...props}
           onClick={() => {
-            openMenu(!isOpen)
+            openMenu(!isOpen);
           }}
         >
           {children}
@@ -87,10 +93,18 @@ export const HeaderLink = ({
                   </a>
                 </Link>
               ))}
+
+              <Link href=".">
+                <a className={cn(s.drop__item, s.center)}>
+                  <div className={cn(s.drop__item_info)}>
+                    <Button style="accent">See all topic</Button>
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
       )}
     </>
-  )
-}
+  );
+};

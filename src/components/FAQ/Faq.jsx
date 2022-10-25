@@ -14,7 +14,7 @@ export const Faq = ({ data }) => {
   return (
     <section className={s.faq}>
       <div className="container">
-        <Title tag="h2" className={s.title}>
+        <Title tag="h2" className={s.maintitle}>
           Questions and answers
         </Title>
 
