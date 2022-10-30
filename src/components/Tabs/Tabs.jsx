@@ -6,13 +6,14 @@ import "react-tabs/style/react-tabs.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export const TabsComponent = () => {
+export const TabsExpertsBooking = () => {
   const tabs = [
     {
       id: 1,
       title: "Choose from an extensive database of experts",
       text: "Among tens of thousands of practitioners whose professional experience and leadership potential we track and analyze, our team always finds a person exactly for your request and task.",
       link: "/",
+      src: ServiceImg,
       linkText: "Learn more",
     },
     {
@@ -56,9 +57,6 @@ export const TabsComponent = () => {
             <h3 className={s.tab__title}>{item.title}</h3>
             <div className={s.hidden}>
               <p>{item.text}</p>
-              {/* <Link href={item.link}>
-                <a className={s.link}>{item.linkText}</a>
-              </Link> */}
             </div>
           </Tab>
         ))}

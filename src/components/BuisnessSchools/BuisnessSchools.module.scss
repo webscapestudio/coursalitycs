@@ -1,0 +1,68 @@
+.section {
+  margin-top: 165px;
+}
+
+.wrap {
+  margin-top: 18px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 50px;
+  color: #383838;
+  padding-left: 39px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 10px;
+    background: url("./teacher.svg") no-repeat center / contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section {
+    margin-top: 100px;
+  }
+  .item {
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 40px;
+    &:before {
+      top: 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 70px;
+  }
+  .title {
+    text-align: center;
+  }
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    &:before {
+      top: 8px;
+    }
+  }
+
+  .wrap {
+    margin-top: 32px;
+  }
+}

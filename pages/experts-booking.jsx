@@ -9,6 +9,7 @@ import HeroLine from "../public/img/heroline.svg";
 import HeroLineMob from "../public/img/heroline_mob.svg";
 import {
   Callback,
+  CallbackGirl,
   CallbackSmall,
   Combination,
   Database,
@@ -17,7 +18,7 @@ import {
   HowItWorks,
   PriceDepend,
   Reviews,
-  TabsComponent,
+  TabsExpertsBooking,
   TextLine,
 } from "../src/components";
 import ArrowIcon from "../public/img/examples/arrow.svg";
@@ -184,7 +185,7 @@ export default function Experts() {
         <section className={s.tabs}>
           <div className="container">
             <div className={s.tabs__wrap}>
-              <TabsComponent />
+              <TabsExpertsBooking />
             </div>
           </div>
         </section>
@@ -232,7 +233,7 @@ export default function Experts() {
 
         <section className={s.callback}>
           <div className="container">
-            <Callback />
+            <CallbackGirl />
           </div>
         </section>
 

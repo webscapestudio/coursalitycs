@@ -63,3 +63,47 @@
     margin-top: 70px;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    .scroll {
+      overflow-x: auto;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  .horizontal {
+    display: none;
+  }
+  .wrap {
+    background: none;
+    border-radius: 0;
+    display: flex;
+    gap: 16px;
+    min-width: max-content;
+  }
+
+  .item {
+    background: #f9f9f9;
+    border-radius: 30px;
+    align-items: start;
+    padding: 32px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .item__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
