@@ -253,23 +253,24 @@ export default function CustomizedPrograms() {
 
               <div className={s.sure__item}>
                 <p>
-                  Gain new applied knowledge in your or related field or
-                  function
+                  <span>Enjoy the process: </span> studying should not be a
+                  burden!
                 </p>
               </div>
               <div className={s.div}></div>
 
               <div className={s.sure__item}>
                 <p>
-                  Get a boost of motivation that will move your team to success
+                  <span>Get a boost</span> of motivation that will move your
+                  team to success
                 </p>
               </div>
               <div className={s.div}></div>
 
               <div className={s.sure__item}>
                 <p>
-                  Get the maximum benefit with the minimum effort and cost on
-                  your part
+                  <span>Get the maximum benefit</span> with the minimum effort
+                  and cost on your part
                 </p>
               </div>
             </div>

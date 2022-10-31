@@ -71,6 +71,26 @@
   .reviews__section {
     margin-top: 100px;
   }
+
+  .sure {
+    margin-top: 70px;
+  }
+
+  .sure__wrap {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 32px;
+    .div {
+      display: none;
+    }
+  }
+
+  .sure__item {
+    max-width: 45%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -80,5 +100,27 @@
 
   .reviews__section {
     margin-top: 80px;
+  }
+
+  .sure__wrap {
+    gap: 16px;
+    .div {
+      display: block;
+      height: 40px;
+      width: 1px;
+      background: $accent;
+      margin: 0;
+      margin-right: auto;
+    }
+  }
+  .sure__item {
+    max-width: none;
+    width: 100%;
+    p {
+      text-align: center;
+      span {
+        color: $accent;
+      }
+    }
   }
 }
