@@ -23,7 +23,6 @@ import {
   Callback,
   CallbackSmall,
   Reviews,
-  TabsComponent,
   TextLine,
   Topics,
   Quiz,

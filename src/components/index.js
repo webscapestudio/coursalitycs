@@ -1,3 +1,5 @@
+export { ExpertsFour } from "./ExpertsFour/ExpertsFour";
+export { WeOrganize } from "./WeOrganize/WeOrganize";
 export { BuisnessSchools } from "./BuisnessSchools/BuisnessSchools";
 export { ProgramsSection } from "./ProgramsSection/ProgramsSection";
 export { CallbackPeoples } from "./CallbackPeoples/CallbackPeoples";

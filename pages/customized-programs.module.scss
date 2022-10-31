@@ -1,0 +1,84 @@
+@import "styles/vars";
+
+.hero {
+  margin-top: 140px;
+}
+
+.title {
+  text-align: center;
+}
+
+.callback {
+  margin-top: 100px;
+}
+
+.sure {
+  margin-top: 100px;
+}
+
+.sure__title {
+  text-align: center;
+  max-width: 509px;
+  margin: 0 auto;
+}
+
+.sure__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  .div {
+    height: 75px;
+    width: 1px;
+    background: $gray;
+    margin: 0 20px;
+  }
+}
+
+.sure__item {
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* or 122% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+}
+
+.reviews__section {
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .callback {
+    margin-top: 70px;
+  }
+
+  .reviews__section {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 86px;
+  }
+
+  .reviews__section {
+    margin-top: 80px;
+  }
+}

@@ -14,9 +14,9 @@ export const HowItWorks = ({ data, className, noButton, title }) => {
 
         <div className={s.wrap}>
           {data &&
-            data.map((item, idx) => (
+            data.map((item, i) => (
               <>
-                <div key={idx} className={s.item}>
+                <div key={i} className={s.item}>
                   <div className={s.num}>{item.num}</div>
                   <p> {item.title}</p>
                 </div>
