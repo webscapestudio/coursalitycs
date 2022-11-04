@@ -1,3 +1,4 @@
+export { CheckItems } from "./CheckItems/CheckItems";
 export { ExpertsFour } from "./ExpertsFour/ExpertsFour";
 export { WeOrganize } from "./WeOrganize/WeOrganize";
 export { BuisnessSchools } from "./BuisnessSchools/BuisnessSchools";

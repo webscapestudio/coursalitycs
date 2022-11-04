@@ -44,7 +44,7 @@ export const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="https://coursalytics.com/research-and-analytics">
+                  <Link href="/research-and-analytics">
                     Research & Analytics
                   </Link>
                 </li>

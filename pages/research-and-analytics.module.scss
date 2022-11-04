@@ -1,0 +1,143 @@
+@import "styles/vars";
+
+.hero {
+  margin-top: 180px;
+  min-height: 180px;
+}
+
+.hero__top {
+  display: flex;
+  gap: 10px;
+}
+
+.hero__title {
+  text-align: center;
+  line-height: 130% !important;
+
+  div {
+    display: inline !important;
+  }
+}
+
+.typing {
+  line-height: 130%;
+
+  padding: 4px;
+  background: #acd7fd;
+  span {
+    width: 2px;
+    font-weight: 300;
+  }
+}
+
+.wecan {
+  margin-top: 100px;
+}
+
+.wecan__title {
+  text-align: center;
+}
+
+.wecan__wrap {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.wecan__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 40px 19px 72px 60px;
+  border: 1px solid #1b8ffb;
+  box-shadow: 0px 4px 20px rgba(27, 143, 251, 0.1);
+  border-radius: 10px;
+
+  h3 {
+    color: $accent;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  svg {
+    margin: 25px auto 0;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    color: #383838;
+    padding-left: 55px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../public/img/research/check.svg") no-repeat center /
+        contain;
+      width: 35px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 35px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.callback {
+  margin-top: 100px;
+}
+
+.reviews__section {
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .callback {
+    margin-top: 70px;
+  }
+
+  .wecan__wrap {
+    flex-direction: column;
+  }
+
+  .wecan__item {
+    width: 100%;
+    padding: 20px;
+    h3 {
+      line-height: 130%;
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 80px;
+  }
+  .hero__top {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
