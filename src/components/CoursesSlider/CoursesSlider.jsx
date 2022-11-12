@@ -1,14 +1,15 @@
-import cn from "classnames"
-import { useRef } from "react"
-import { EffectCoverflow, Navigation } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Button, SliderArrow, Title } from "../../ui"
-import { IndexCard } from "../IndexCard/IndexCard"
-import s from "./CoursesSlider.module.scss"
+import axios from "axios";
+import cn from "classnames";
+import { useEffect, useRef, useState } from "react";
+import { EffectCoverflow, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Button, SliderArrow, Title } from "../../ui";
+import { IndexCard } from "../IndexCard/IndexCard";
+import s from "./CoursesSlider.module.scss";
 
 export const CoursesSlider = () => {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   const infoCards = [
     {
       id: 1,
@@ -19,8 +20,7 @@ export const CoursesSlider = () => {
     },
     {
       id: 2,
-      title:
-        "The Positive Leader: Deep Change and Organizational Transformation",
+      title: "The Positive Leader: Deep Change and Organizational Transformation",
       address: "Stephen M. Ross School of Business",
       map: "Ann Arbor, Michigan, United States",
       date: "Jun 19—24, 2022",
@@ -46,20 +46,33 @@ export const CoursesSlider = () => {
       map: "New York, United States",
       date: "Jul 11—22, 2022",
     },
-  ]
+  ];
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const responce = await axios.get("https://ca-production.coursalytics.com/api/homepage/popular_courses");
+      console.log(responce);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section className={s.section}>
       <div className="container">
         <Title tag="h2">
-          Thousands of <span>courses</span> from leading educators and <br />{" "}
-          institutions at your fingertips
+          Thousands of <span>courses</span> from leading educators and <br /> institutions at your fingertips
         </Title>
+        {data.map((item) => {
+          <p>{item.name}</p>;
+        })}
 
         <Swiper
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current
-            swiper.params.navigation.nextEl = navigationNextRef.current
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
           }}
           navigation={{
             prevEl: navigationPrevRef.current,
@@ -69,14 +82,14 @@ export const CoursesSlider = () => {
             // Delay execution for the refs to be defined
             setTimeout(() => {
               // Override prevEl & nextEl now that refs are defined
-              swiper.params.navigation.prevEl = navigationPrevRef.current
-              swiper.params.navigation.nextEl = navigationNextRef.current
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
 
               // Re-init navigation
-              swiper.navigation.destroy()
-              swiper.navigation.init()
-              swiper.navigation.update()
-            })
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
+            });
           }}
           spaceBetween={0}
           centeredSlides={true}
@@ -118,17 +131,11 @@ export const CoursesSlider = () => {
           ))}
         </Swiper>
 
-        <div
-          className={cn(s.index__slider_arr, s.index__slider_arr_prev)}
-          ref={navigationPrevRef}
-        >
+        <div className={cn(s.index__slider_arr, s.index__slider_arr_prev)} ref={navigationPrevRef}>
           <SliderArrow prev />
         </div>
 
-        <div
-          className={cn(s.index__slider_arr, s.index__slider_arr_next)}
-          ref={navigationNextRef}
-        >
+        <div className={cn(s.index__slider_arr, s.index__slider_arr_next)} ref={navigationNextRef}>
           <SliderArrow next />
         </div>
 
@@ -137,5 +144,5 @@ export const CoursesSlider = () => {
         </Button>
       </div>
     </section>
-  )
-}
+  );
+};

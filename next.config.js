@@ -20,6 +20,8 @@ const nextConfig = {
     }
   },
 
+
+
   images: {
     domains: ["ca-production.coursalytics.com"],
     formats: ["image/avif", "image/webp"],

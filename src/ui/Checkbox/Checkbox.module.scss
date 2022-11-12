@@ -4,6 +4,8 @@
   gap: 12px;
 
   p {
-    margin-left: 0;
+    margin-left: 0 !important;
+    max-width: 470px;
+    width: 100%;
   }
 }

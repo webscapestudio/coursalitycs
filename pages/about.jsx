@@ -9,15 +9,9 @@ import DataIcon from "../public/img/examples/data.svg";
 import ListIcon from "../public/img/examples/list.svg";
 import PenIcon from "../public/img/examples/pen.svg";
 import UsersIcon from "../public/img/examples/users.svg";
-import { Widget } from '@typeform/embed-react'
-import {
-  Callback,
-  CallbackTextarea,
-  CoursesSlider,
-  Examples,
-  HowItWorks,
-  WeServe,
-} from "../src/components";
+import { Widget } from "@typeform/embed-react";
+import { Callback, CallbackTextarea, CoursesSlider, Examples, HowItWorks, WeServe } from "../src/components";
+import { MeetOurTeam, TheLatest } from "../src/screens";
 
 export default function AboutPage() {
   const hiwdata = [
@@ -68,11 +62,9 @@ export default function AboutPage() {
             <div className={s.wrap}>
               <div className={s.left}>
                 <Title tag="h1" className={s.title}>
-                  <span>Coursalytics</span> is an Executive Education
-                  marketplace making it{" "}
-                  <span>easy to find, compare, and book </span> executive
-                  programs and individual experts time for meetings live online
-                  and in-person <span>all over the world</span>
+                  <span>Coursalytics</span> is an Executive Education marketplace making it{" "}
+                  <span>easy to find, compare, and book </span> executive programs and individual experts time for
+                  meetings live online and in-person <span>all over the world</span>
                 </Title>
 
                 <div className={s.btns}>
@@ -86,8 +78,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        <Widget  id="nbpvPpyj" style={{ width: '50%' }} className="my-form"/>
 
         <WeServe />
 
@@ -112,7 +102,11 @@ export default function AboutPage() {
           title={["Our", <span> values</span>]}
         />
 
+        <MeetOurTeam />
+
         <CoursesSlider />
+
+        <TheLatest />
 
         <section id="cb" className={s.callback}>
           <div className="container">

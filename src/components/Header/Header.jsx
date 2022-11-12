@@ -34,19 +34,19 @@ export const Header = () => {
         },
         {
           id: 2,
-          link: "/programs-exlusive",
+          link: "/executive-programs",
           title: "Executive programs",
           icon: <ProgramsIcon />,
         },
         {
           id: 3,
-          link: "/programs-customized",
+          link: "/customized-programs",
           title: "Customized programs",
           icon: <CustomizedIcon />,
         },
         {
           id: 4,
-          link: "/research",
+          link: "/research-and-analytics",
           title: "Research & Analytics",
           icon: <LoupeIcon />,
         },
@@ -106,7 +106,6 @@ export const Header = () => {
           icon: <FinanceIcon />,
           text: "Over 150 topics",
         },
-    
       ],
     },
     { id: 3, title: "Courses", link: "/courses" },
@@ -116,11 +115,11 @@ export const Header = () => {
 
   const showMenu = () => {
     setIsOpen(!isOpen);
-    if (!isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    // if (!isOpen) {
+    //   document.body.style.overflow = "hidden";
+    // } else {
+    //   document.body.style.overflow = "";
+    // }
   };
   return (
     <header className={cn(s.header)}>
@@ -138,12 +137,7 @@ export const Header = () => {
             })}
           >
             {links.map((item) => (
-              <HeaderLink
-                key={item.id}
-                sub={item.sub}
-                subTopics={item.subTopics}
-                link={item.link}
-              >
+              <HeaderLink key={item.id} sub={item.sub} subTopics={item.subTopics} link={item.link}>
                 {item.title}
               </HeaderLink>
             ))}

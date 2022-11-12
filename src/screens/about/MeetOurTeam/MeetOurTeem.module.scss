@@ -1,0 +1,135 @@
+@import "styles/vars";
+
+.section {
+  margin-top: 100px;
+  min-height: 630px;
+}
+
+.title {
+  text-align: center;
+}
+
+.wrap {
+  margin-top: 50px;
+}
+
+.slide {
+  max-width: 269px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  max-height: 269px;
+  max-width: 269px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(51, 51, 51, 0.05);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 20px 35px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    max-height: 1000px;
+    background: #f3f9ff;
+    border: 1px solid #1b8ffb;
+    box-shadow: 0px 4px 12px rgba(51, 51, 51, 0.05);
+    .card__hidden p {
+      opacity: 1;
+    }
+  }
+}
+
+:global(.swiper-slide-active) {
+  .card {
+    border: 1px solid #1b8ffb;
+    box-shadow: 0px 4px 12px rgba(51, 51, 51, 0.05);
+    max-height: 1000px;
+    background: #f3f9ff;
+    .card__hidden p {
+      opacity: 1;
+    }
+  }
+}
+
+.card__image {
+  width: 120px;
+  min-height: 120px;
+  height: 120%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card__name {
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  color: #383838;
+  margin-top: 12px;
+}
+
+.card__position {
+  margin-top: 8px;
+  font-weight: 550;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #999999;
+}
+
+.card__hidden {
+  margin-top: 20px;
+  p {
+    opacity: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+
+    color: #383838;
+  }
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 152px;
+  margin: 0 auto;
+  position: relative;
+  height: 56px;
+  bottom: 200px;
+  z-index: 0;
+}
+
+.slider__arr {
+  position: absolute;
+}
+
+.slider__arr_prev {
+  left: 0;
+}
+
+.slider__arr_next {
+  right: 0;
+}
+@media (max-width: 1440px) {
+  .arrows {
+    max-width: 96px;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrows {
+    bottom: 0;
+    margin-top: 24px;
+    max-width: 120px;
+  }
+}
