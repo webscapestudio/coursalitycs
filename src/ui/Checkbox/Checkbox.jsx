@@ -1,18 +1,18 @@
-import { useState } from "react"
-import s from "./Checkbox.module.scss"
+import { useState } from "react";
+import s from "./Checkbox.module.scss";
 
 export const Checkbox = ({ label, value, onChange }) => {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
 
   const handleChange = () => {
-    setChecked(!checked)
-  }
+    setChecked(!checked);
+  };
   return (
     <div>
-      <label>
-        <input type="checkbox" checked={value} onChange={onChange} />
-        {label}
+      <label className={s.wrap}>
+        <input type="checkbox" required checked={value} onChange={onChange} />
+        <p> {label}</p>
       </label>
     </div>
-  )
-}
+  );
+};
