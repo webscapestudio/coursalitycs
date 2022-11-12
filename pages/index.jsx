@@ -137,8 +137,7 @@ export default function Home({ experts }) {
     },
     {
       id: 3,
-      title:
-        "What if the language spoken in the company does not correspond to the language?",
+      title: "What if the language spoken in the company does not correspond to the language?",
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
@@ -150,8 +149,7 @@ export default function Home({ experts }) {
     },
     {
       id: 5,
-      title:
-        "Is it possible to request more than one expert for several events?",
+      title: "Is it possible to request more than one expert for several events?",
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
@@ -173,31 +171,20 @@ export default function Home({ experts }) {
                   Start learning smarter <span>now</span>
                 </Title>
                 <p className={s.hero__subtitle}>
-                  We make it easy to find, compare, and book executive programs
-                  and individual experts time for meetings live online and
-                  in-person all over the world
+                  We make it easy to find, compare, and book executive programs and individual experts time for meetings
+                  live online and in-person all over the world
                 </p>
 
                 <div className={s.hero__btn}>
-                  <Button link="https://coursalytics.com/experts-catalog">
-                    Search Experts
-                  </Button>
-                  <Button
-                    style="accent"
-                    link="https://coursalytics.com/courses"
-                  >
+                  <Button link="https://coursalytics.com/experts-catalog">Search Experts</Button>
+                  <Button style="accent" link="https://coursalytics.com/courses">
                     Browse Courses
                   </Button>
                 </div>
 
                 <div className={s.hero__info}>
                   <div className="hero__image">
-                    <Image
-                      src={billy}
-                      width={"204px"}
-                      height={"224px"}
-                      alt="coursalytics"
-                    />
+                    <Image src={billy} width={"204px"} height={"224px"} alt="coursalytics" />
                   </div>
 
                   <div className={s.hero__info_item}>
@@ -223,12 +210,7 @@ export default function Home({ experts }) {
                   <div className={s.hero__user}>
                     <div className={s.hero__user_top}>
                       <div className={s.hero__user_img}>
-                        <Image
-                          src={HeroUserImage}
-                          width="33px"
-                          height="33px"
-                          alt="User"
-                        />
+                        <Image src={HeroUserImage} width="33px" height="33px" alt="User" />
 
                         <div className={s.status}></div>
                       </div>
@@ -296,7 +278,7 @@ export default function Home({ experts }) {
 
           <TextLine />
 
-          <Quiz />
+          <Quiz formId="nbpvPpyj" />
 
           <Faq data={faqData} />
         </main>
@@ -306,12 +288,8 @@ export default function Home({ experts }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get(
-    `https://ca-production.coursalytics.com/api/homepage/popular_courses`
-  );
-  const expRes = await axios.get(
-    "https://ca-production.coursalytics.com/api/homepage/experts"
-  );
+  const res = await axios.get(`https://ca-production.coursalytics.com/api/homepage/popular_courses`);
+  const expRes = await axios.get("https://ca-production.coursalytics.com/api/homepage/experts");
   const topics = await res.data;
 
   const experts = await expRes.data;

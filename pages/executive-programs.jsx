@@ -46,8 +46,7 @@ export default function Programs() {
     },
     {
       id: 2,
-      title:
-        "The Positive Leader: Deep Change and Organizational Transformation",
+      title: "The Positive Leader: Deep Change and Organizational Transformation",
       address: "Stephen M. Ross School of Business",
       map: "Ann Arbor, Michigan, United States",
       date: "Jun 19—24, 2022",
@@ -78,20 +77,17 @@ export default function Programs() {
     {
       id: 1,
       num: "01",
-      title:
-        "Tell us about your learning objectives and educational programs of interest",
+      title: "Tell us about your learning objectives and educational programs of interest",
     },
     {
       id: 2,
       num: "02",
-      title:
-        "Make the best program choice with the help of our recommendations and coaching sessions",
+      title: "Make the best program choice with the help of our recommendations and coaching sessions",
     },
     {
       id: 3,
       num: "03",
-      title:
-        "Let us take over the organization of your admission (except what can't be done without you)",
+      title: "Let us take over the organization of your admission (except what can't be done without you)",
     },
   ];
 
@@ -106,8 +102,7 @@ export default function Programs() {
     {
       id: 2,
       icon: ListIcon,
-      title:
-        "4-hour workshop with an artificial intelligence C-level practitioner",
+      title: "4-hour workshop with an artificial intelligence C-level practitioner",
       text: "from a billion-dollar corporation for one of the largest mining companies",
     },
 
@@ -178,8 +173,7 @@ export default function Programs() {
     },
     {
       id: 3,
-      title:
-        "What if the language spoken in the company does not correspond to the language?",
+      title: "What if the language spoken in the company does not correspond to the language?",
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
@@ -191,8 +185,7 @@ export default function Programs() {
     },
     {
       id: 5,
-      title:
-        "Is it possible to request more than one expert for several events?",
+      title: "Is it possible to request more than one expert for several events?",
       content:
         "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
     },
@@ -239,7 +232,7 @@ export default function Programs() {
         <BuisnessSchools />
         <ReviewsSection data={reviewsData} />
         <TextLine />
-        <CallbackSmall />
+        <CallbackSmall link="https://nm3zw7qlnv7.typeform.com/to/AF45cz8B" />
         <Faq data={faqData} />
       </MainLayout>
     </>

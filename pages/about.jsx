@@ -9,6 +9,7 @@ import DataIcon from "../public/img/examples/data.svg";
 import ListIcon from "../public/img/examples/list.svg";
 import PenIcon from "../public/img/examples/pen.svg";
 import UsersIcon from "../public/img/examples/users.svg";
+import { Widget } from '@typeform/embed-react'
 import {
   Callback,
   CallbackTextarea,
@@ -85,6 +86,8 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <Widget  id="nbpvPpyj" style={{ width: '50%' }} className="my-form"/>
 
         <WeServe />
 
