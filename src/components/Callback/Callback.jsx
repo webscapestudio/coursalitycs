@@ -9,7 +9,11 @@ import * as yup from "yup";
 
 export const Callback = () => {
   const schema = yup
-    .object({ firstName: yup.string().required(), age: yup.number().positive().integer().required() })
+    .object()
+    .shape({
+      email: yup.string().required(),
+      name: yup.string().required(),
+    })
     .required();
 
   const {
@@ -20,7 +24,9 @@ export const Callback = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className={s.callback}>
@@ -36,13 +42,21 @@ export const Callback = () => {
           <p>Contact us and our team members will reach out to discuss your learning objectives.</p>
 
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Input className={s.input} placeholder="Full name" form={{ ...register("name", { required: true }) }} />
+            <Input
+              className={s.input}
+              placeholder="Full name"
+              errorText={errors.name?.message}
+              form={{ ...register("name") }}
+            />
+
             <Input
               className={s.input}
               placeholder="Email"
               type="email"
-              form={{ ...register("email", { required: true }) }}
+              errorText={errors.email?.message}
+              form={{ ...register("email") }}
             />
+
             <div className={s.policy}>
               <Checkbox />
               <p>
@@ -51,7 +65,7 @@ export const Callback = () => {
               </p>
             </div>
 
-            <Button type="submit" className={s.btn} style="accent">
+            <Button submit={true} className={s.btn} style="accent">
               Submit
             </Button>
           </form>

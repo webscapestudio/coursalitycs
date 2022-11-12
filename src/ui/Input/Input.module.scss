@@ -1,7 +1,15 @@
+.wrap {
+  position: relative;
+}
+
 .input {
   border: 1.5px solid #999999;
   border-radius: 10px;
   padding: 0 12px;
+
+  &.err {
+    border: 1.5px solid red;
+  }
 
   input {
     border: none;
@@ -20,4 +28,13 @@
       line-height: 1;
     }
   }
+}
+
+.errorText {
+  font-size: 12px;
+  color: red;
+  line-height: 1;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
 }
