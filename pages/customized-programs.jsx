@@ -3,6 +3,7 @@ import Head from "next/head";
 import {
   Callback,
   CallbackSmall,
+  CheckItems,
   Examples,
   ExpertsFour,
   Faq,
@@ -129,16 +130,16 @@ export default function CustomizedPrograms() {
     },
     {
       id: 2,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Women’s Executive Leadership Program at Berkeley",
+      name: "Not-for-profit organization leader from North America",
+      text: "Personal leadership style evaluations from peers, employers, direct-reports, etc., provided in advance allowed the faculty to provide very tailored feedback to individuals. Extremely helpful!",
       img: Reviews2,
     },
     {
       id: 3,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Advanced Management Program at Wharton",
+      name: "C-level executive of a multibillion IT corporation headquartered in India",
+      text: "Most of us usually stick to a single industry. I certainly did. At Wharton there were people from a very diverse set of industries. Meeting them made me realise that there is a world outside banking as well.",
       img: Reviews3,
     },
   ];
@@ -146,33 +147,56 @@ export default function CustomizedPrograms() {
   const faqData = [
     {
       id: 1,
-      title: "What are the possible training formats?",
+      title: "What can be the duration of customized programs?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "We usually design programs lasting from 3 months to a year in order to be able to conduct training in the most efficient and convenient way. However, we can consider another duration depending on your requirements.",
     },
     {
       id: 2,
+      title: "What are the possible training formats?",
+      content:
+        "We offer a variety of training formats — offline meetings, webinars, pre-recorded lectures, combined format. We will recommend the best option based on your goals and wishes.",
+    },
+    {
+      id: 3,
       title: "What languages can I study in?",
       content:
         "We cooperate with experts from all over the world, so the language of the event can be any, based on your request.",
     },
     {
-      id: 3,
+      id: 4,
       title: "What if the language spoken in the company does not correspond to the language of a potential expert?",
       content:
         "We are sure that the language barrier should not become an obstacle on the way to education. Therefore, our team is always ready to provide a simultaneous translation service for the event. We have been cooperating with the best UN translators for many years, so you don't have to worry about the professionalism and quality of the translation.",
-    },
-    {
-      id: 4,
-      title: "How long does it take to find and choose an expert?",
-      content:
-        "The timing directly depends on your request. Most often, no more than 2 weeks pass from the moment we receive the application to the approval of the speaker by the client.",
     },
     {
       id: 5,
       title: "Is it possible to request more than one expert for several events?",
       content:
         "Sure, we do not limit you in the number of experts. We can help you find several specialists for a number of events at once, just include this information in the application.",
+    },
+  ];
+
+  const CheckData = [
+    {
+      id: 1,
+      title: ["Save your time and", <br />, "effort"],
+      text: "You don't need to conduct assessments or research — we take care of everything.",
+    },
+    {
+      id: 2,
+      title: ["Pay only for what your", <br />, "team needs"],
+      text: "Our personal approach ensures that our research includes only what your organization needs — there will be no irrelevant content or topics that you are not interested in.",
+    },
+    {
+      id: 3,
+      title: ["Stay informed throughout", <br />, " the process"],
+      text: "Your personal manager keeps in touch with you throughout the entire process. Written communication or online meetings – we are always ready to answer your questions.",
+    },
+    {
+      id: 4,
+      title: ["Be confident in the", <br />, "quality of training"],
+      text: "We have been working in business education for 10+ years and use the most up-to-date research methods and data from relevant industries.",
     },
   ];
 
@@ -187,7 +211,7 @@ export default function CustomizedPrograms() {
         <section className={s.hero}>
           <div className="container">
             <Title tag="h1" className={s.title}>
-              Get a fully developed customized <span>educational program</span>
+              Get a fully developed customized <span>educational program </span>
               created especially for <span>your company</span>
             </Title>
           </div>
@@ -213,7 +237,7 @@ export default function CustomizedPrograms() {
           data={ExpertsData}
         />
 
-        {/* <h2>Блоки с галочкой</h2> */}
+        <CheckItems data={CheckData} className />
 
         <section className={s.callback}>
           <div className="container">
@@ -281,3 +305,5 @@ export default function CustomizedPrograms() {
     </>
   );
 }
+
+// https://ca-production.coursalytics.com/api/homepage/experts

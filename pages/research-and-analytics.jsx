@@ -9,6 +9,7 @@ import {
   Faq,
   HowItWorks,
   PriceDepend,
+  PriceDependResearch,
   Reviews,
   TextLine,
   WeOrganize,
@@ -22,6 +23,7 @@ import StarIcon from "../public/img/examples/star.svg";
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
+import { ExamplesResearchAndAnalytics } from "../src/screens";
 
 export default function AboutPage() {
   const howData = [
@@ -146,33 +148,27 @@ export default function AboutPage() {
   const faqData = [
     {
       id: 1,
-      title: "What are the possible training formats?",
+      title: "How quickly can you conduct data-based research?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "It depends on the problem we need to solve and the data you want us to use. For instance, using only our database, which is the fullest that exists nowadays (10k+ courses, 50k+ professors, 10k+ reviews), the approximate time for the analysis is 3 weeks. However, if you need additional research, including interviews and other methods, the analysis may take up to 3 months.",
     },
     {
       id: 2,
-      title: "What languages can I study in?",
+      title: "In what cases do you need to conduct additional research?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "Usually, we have enough data to analyze short-term programs. However, if your research interest lies in the analysis of degree- or long-term programs, we may need to perform additional research.",
     },
     {
       id: 3,
-      title: "What if the language spoken in the company does not correspond to the language?",
+      title: "How can you make precise conclusions about the program?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "We analyze both the way the university teaches the courses to its students and students’ feedback, which provides us with an unbiased view of the interesting program.",
     },
     {
       id: 4,
-      title: "How long does it take to find and choose an expert?",
+      title: "Is there any limitations about the industry of education you can conduct the research in?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
-    },
-    {
-      id: 5,
-      title: "Is it possible to request more than one expert for several events?",
-      content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "No, we are open to any ideas and research problems you may have: tell us about your goals and we will see how we can help you with them.",
     },
   ];
 
@@ -193,16 +189,27 @@ export default function AboutPage() {
                 <ReactTypingEffect
                   speed={50}
                   typingDelay={100}
-                  eraseDelay={100}
+                  eraseDelay={50}
+                  eraseSpeed={30}
                   className={s.typing}
-                  text={["data-driven recommendations for corporate education"]}
+                  text={[
+                    "data-driven recommendations for corporate education",
+                    "a strategic development plan for your educational institution",
+                    "data-driven recommendations for your educational institution",
+                    "a strategic development plan for corporate education",
+                  ]}
                 />
               </Title>
             </div>
           </div>
         </section>
 
-        <HowItWorks noButton={true} data={howData} title={["How", <span> it works</span>]} />
+        <HowItWorks
+          noButton={true}
+          data={howData}
+          title={["How", <span> it works</span>]}
+          link="https://nm3zw7qlnv7.typeform.com/to/CLfx6nnF"
+        />
 
         <WeOrganize
           title={["We conduct qualitative and quantitative", <br />, "research based on real data"]}
@@ -261,7 +268,7 @@ export default function AboutPage() {
 
         <CheckItems data={CheckData} className />
 
-        <Examples data={examplesData} />
+        <ExamplesResearchAndAnalytics data={examplesData} />
 
         <section className={s.reviews__section}>
           <div className="container-xl">
@@ -273,7 +280,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <PriceDepend />
+        <PriceDependResearch />
 
         <TextLine />
 

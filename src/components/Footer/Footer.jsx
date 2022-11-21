@@ -13,7 +13,7 @@ export const Footer = () => {
               <h4>Coursalytics</h4>
               <ul>
                 <li>
-                  <Link href="/terms">Terms of Use</Link>
+                  <Link href="/website-terms-of-use">Terms of Use</Link>
                 </li>
 
                 <li>
@@ -26,27 +26,19 @@ export const Footer = () => {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <Link href="https://coursalytics.com/experts-booking">
-                    Experts’ booking
-                  </Link>
+                  <Link href="https://coursalytics.com/experts-booking">Experts’ booking</Link>
                 </li>
 
                 <li>
-                  <Link href="https://coursalytics.com/executive-programs">
-                    Executive programs
-                  </Link>
+                  <Link href="https://coursalytics.com/executive-programs">Executive programs</Link>
                 </li>
 
                 <li>
-                  <Link href="https://coursalytics.com/customized-programs">
-                    Customized programs
-                  </Link>
+                  <Link href="https://coursalytics.com/customized-programs">Customized programs</Link>
                 </li>
 
                 <li>
-                  <Link href="/research-and-analytics">
-                    Research & Analytics
-                  </Link>
+                  <Link href="/research-and-analytics">Research & Analytics</Link>
                 </li>
               </ul>
             </div>
@@ -63,13 +55,11 @@ export const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="/faq">FAQ</Link>
+                  <Link href="/frequently-asked-questions">FAQ</Link>
                 </li>
 
                 <li>
-                  <a href="mailto:hello@coursalytics.com">
-                    Contact Us By Email
-                  </a>
+                  <a href="mailto:hello@coursalytics.com">Contact Us By Email</a>
                 </li>
               </ul>
             </div>
@@ -90,16 +80,12 @@ export const Footer = () => {
         <div className={s.bottom}>
           <div className={s.bottom__text}>
             <p>
-              All school and university names, program names, course names,
-              brochures, logos, videos, images, and brands are property of their
-              respective owners and not Coursalytics. All school and university
-              names, program names, course names, brochures, logos, videos,
-              images, and brand references used in this website are for
-              identification and informational purposes only. Use of these
-              school and university names, program names, course names,
-              brochures, logos, videos, images, and brand references does not
-              imply endorsement by, sponsorship by, or affiliation with the
-              underlying school or university.
+              All school and university names, program names, course names, brochures, logos, videos, images, and brands
+              are property of their respective owners and not Coursalytics. All school and university names, program
+              names, course names, brochures, logos, videos, images, and brand references used in this website are for
+              identification and informational purposes only. Use of these school and university names, program names,
+              course names, brochures, logos, videos, images, and brand references does not imply endorsement by,
+              sponsorship by, or affiliation with the underlying school or university.
             </p>
 
             <ul>
@@ -108,10 +94,7 @@ export const Footer = () => {
               <li>Find jobs at Jooble</li>
             </ul>
 
-            <p>
-              This product includes GeoLite2 data created by MaxMind, available
-              from maxmind.com
-            </p>
+            <p>This product includes GeoLite2 data created by MaxMind, available from maxmind.com</p>
           </div>
 
           <div className={s.socials}>

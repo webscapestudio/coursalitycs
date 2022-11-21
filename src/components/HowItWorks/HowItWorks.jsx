@@ -2,7 +2,7 @@ import cn from "classnames";
 import { Button, Title } from "../../ui";
 import s from "./HowItWorks.module.scss";
 
-export const HowItWorks = ({ data, className, noButton, title }) => {
+export const HowItWorks = ({ data, className, noButton, link, title }) => {
   return (
     <section className={cn(s.how, className)}>
       <div className="container">
@@ -26,7 +26,7 @@ export const HowItWorks = ({ data, className, noButton, title }) => {
         </div>
 
         {noButton && (
-          <Button className={s.btn} style="accent">
+          <Button className={s.btn} style="accent" link={link}>
             Fill out Request Form
           </Button>
         )}

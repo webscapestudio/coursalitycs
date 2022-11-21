@@ -1,0 +1,97 @@
+@import "styles/vars";
+.examples {
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.wrap {
+  display: grid;
+  margin-top: 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-content: space-between;
+  &.four {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    .item {
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+.item {
+  max-width: 310px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.item__top {
+  display: flex;
+  gap: 18px;
+}
+
+.client {
+  color: $accent;
+  margin-top: 15px;
+  span {
+    font-weight: 700;
+  }
+}
+
+.reviews__section {
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+  }
+}
+.icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .item {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    grid-template-columns: repeat(1, 1fr);
+    &.four {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      .item {
+        justify-content: center;
+        margin: 0 auto;
+      }
+    }
+  }
+}

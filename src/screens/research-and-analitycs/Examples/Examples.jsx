@@ -1,8 +1,9 @@
 import cn from "classnames";
-import { Title } from "../../ui";
+import { Title } from "../../../ui";
+
 import s from "./Examples.module.scss";
 
-export const Examples = ({ data, title, four, className }) => {
+export const ExamplesResearchAndAnalytics = ({ data, title, four, className }) => {
   return (
     <section className={s.examples}>
       <div className="container">
@@ -23,8 +24,11 @@ export const Examples = ({ data, title, four, className }) => {
           {data &&
             data.map((item) => (
               <div key={item.id} className={s.item}>
-                <item.icon className={s.icon} />
-                <p className={s.title}>{item.title}</p>
+                <div className={s.item__top}>
+                  <item.icon className={s.icon} />
+                  <p className={s.title}>{item.title}</p>
+                </div>
+                <p className={s.client}>{item.sub}</p>
                 <p className={s.text}>{item.text}</p>
               </div>
             ))}

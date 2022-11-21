@@ -10,7 +10,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
-export const Faq = ({ data }) => {
+export const Faq = ({ data }) => { 
   return (
     <section className={s.faq}>
       <div className="container">

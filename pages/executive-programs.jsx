@@ -144,16 +144,16 @@ export default function Programs() {
     },
     {
       id: 2,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Women’s Executive Leadership Program at Berkeley",
+      name: "Not-for-profit organization leader from North America",
+      text: "Personal leadership style evaluations from peers, employers, direct-reports, etc., provided in advance allowed the faculty to provide very tailored feedback to individuals. Extremely helpful!",
       img: Reviews2,
     },
     {
       id: 3,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Advanced Management Program at Wharton",
+      name: "C-level executive of a multibillion IT corporation headquartered in India",
+      text: "Most of us usually stick to a single industry. I certainly did. At Wharton there were people from a very diverse set of industries. Meeting them made me realise that there is a world outside banking as well.",
       img: Reviews3,
     },
   ];
@@ -161,33 +161,40 @@ export default function Programs() {
   const faqData = [
     {
       id: 1,
-      title: "What are the possible training formats?",
+      title: "How can you help me find the right course?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "It’s very simple. You just let us know what you would like to learn, and we offer you recommendations based on what we know about the lifelong learning universe. We have tens of thousands of courses that we analyzed and we have discussed thousands of executive level courses with prior course takers. Some of the world’s most prominent business schools have used our service to map the competitive landscape and design their own courses. We are always happy to connect with you for phone consultation so we get customize our learning suggestions based on your current career stage and future aspirations.",
     },
     {
       id: 2,
-      title: "What languages can I study in?",
+      title: "How do you select courses for the platform?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "Our goal is to put together various courses from top providers that could help current and prospective leaders in advancing their professional knowledge and skills. Those include all offerings by major executive education providers as well as various other relevant learning opportunities. We constantly expand our inventory to make sure it matches learning needs of our clients worldwide.",
     },
     {
       id: 3,
-      title: "What if the language spoken in the company does not correspond to the language?",
+      title: "How much do executive level courses typically cost?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "Executive education is usually rather expensive, and some non-degree courses can exceed USD 80K, but there are also other shorter or online versions of courses that are within several hundred USD. There is always an opportunity to find something within your budget.",
     },
     {
       id: 4,
-      title: "How long does it take to find and choose an expert?",
+      title: "What if I need to cancel the course?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "Things do happen and people need to cancel and reschedule their course participation all the time. At Coursalytics.com we try our best to help customers adjust their learning journeys. However, we do have to follow education providers’ terms. When you book a course at Coursaltytics.com that means you agree with the terms and conditions of the education provider offering it. We will try our best to negotiate a solution (100% success so far), but it’s the same as returning non-refundable airline tickets: miracles do happen, but don’t trust anyone who promises them.",
     },
     {
       id: 5,
-      title: "Is it possible to request more than one expert for several events?",
-      content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+      title: "What is the best way to choose courses?",
+      content: [
+        "Lifelong learning is a process. Depending on your career stage, professional development goals as well as travel and finance opportunities, multiple options can be a good fit. Selecting the right course requires taking several steps:",
+        <br />,
+        "- identifying your development goals,",
+        <br />,
+        "- identifying learning options that could help address them,",
+        <br />,
+        "- selecting a course that best fits your learning needs at your specific career stage.",
+      ],
     },
   ];
   return (
@@ -206,6 +213,7 @@ export default function Programs() {
                 speed={50}
                 typingDelay={100}
                 eraseDelay={100}
+                eraseSpeed={30}
                 className={s.typing}
                 text={[
                   "top business schools",

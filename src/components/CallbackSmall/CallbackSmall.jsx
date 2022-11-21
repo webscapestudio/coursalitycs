@@ -12,8 +12,8 @@ export const CallbackSmall = ({ className, link }) => {
             learning option for you.
           </Title>
 
-          <Button style="accent" link={link} className={s.btn}>
-            Fill out an application
+          <Button style="accent" className={s.btn}>
+            <a href="#quiz">Fill out an application</a>
           </Button>
         </div>
       </div>

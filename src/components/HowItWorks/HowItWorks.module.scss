@@ -27,7 +27,10 @@
 
 .btn {
   margin: 60px auto 0;
-  display: block;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .div {

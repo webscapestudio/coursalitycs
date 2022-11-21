@@ -34,10 +34,60 @@ import {
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
+import expert1 from "../src/components/ExpertsSlider/assets/Helio_Fred_Garcia.jpg";
+import expert2 from "../src/components/ExpertsSlider/assets/Antonie_Knoppers.jpg";
+import expert3 from "../src/components/ExpertsSlider/assets/Massimo_Massa.jpg";
+import expert4 from "../src/components/ExpertsSlider/assets/Shahzad_Ansari.jpg";
+import expert5 from "../src/components/ExpertsSlider/assets/Serguei_Netessine.jpg";
 import axios from "axios";
 
 export default function Home({ experts }) {
-  const expertsData = experts;
+  const expertsData = [
+    {
+      id: 1,
+      photo: expert1,
+      name: "Helio Fred Garcia",
+      text: "I’ve had the good fortune of working in a world of crisis for nearly 40 years teaching it for more than 30 years. And one thing that I and my firm find when we study crises is they follow predictable patterns. There are predictable patterns of human behavior which you know from a marketing perspective, but there are also predictable patterns of organizational behavior, of stakeholder behavior when things go wrong.",
+      position: "Adjunct Associate Professor of Professional Development and Leadership at Columbia Engineering",
+    },
+    {
+      id: 2,
+      photo: expert2,
+      name: "Antonie Knoppers",
+      text: [
+        "So presence I define as not only being in a moment, which, you know, the word “presence” says “has that being present” but also to authentically connect with anyone you are communicating with in order to motivate them, to inspire them, to convince them. For me leadership is all actually about influencing.",
+        <br />,
+        "As a leader you want someone to do something, you want them to reach certain goals you have, implement a strategy. And in order to exert influence, “presence” really helps.",
+      ],
+      position: "Lecturer at at Rotterdam School of Management",
+    },
+    {
+      id: 3,
+      photo: expert3,
+      name: "Massimo Massa",
+      text: "The common thing of all fintech innovation is the backbone of the new people. So what is the new common thing of this economy? It’s the economy of shared resources. If you think about Airbnb we share homes and if you think about Uber we share carpool. If we think about fintech we share a platform so the new economy of fintech is the economy where we try to reduce the waste of resources we believe and trust in each other and we believe in the environment. It’s an economy in which ironically technology is not the most important thing, but a trust among people is.",
+      position: "Professor of Finance and Co-Director of the Hoffmann Research Fund at INSEAD Business School",
+    },
+    {
+      id: 4,
+      photo: expert4,
+      name: "Shahzad Ansari",
+      text: "I think one of the core things over here is “Is the company innovation-ready?”, which means that “Do you have an innovation mindset?” So you just don’t launch an innovation. It should fit with your overall strategic goals. So it’s not about launching an innovation, it's about having an innovation strategy in order to accomplish the goals that you have.",
+      position: "Professor of Strategy & Innovation at Cambridge Judge Business School",
+    },
+    {
+      id: 5,
+      photo: expert5,
+      name: "Serguei Netessine",
+      text: [
+        "It’s a situation where a whole company is going through a change and they recognise that educating their top-management is part of the change. It’s a part of this monumental transformation of a large company.",
+        <br />,
+        "So it’s all about experimentation. It’s all about trying new business models, failing with it, most likely. But then embracing one of the successful experiments and moving forward and trying again.",
+      ],
+      position:
+        "Professor of Operations, Information and Decisions; Vice Dean, Global Initiatives at The Wharton School",
+    },
+  ];
 
   const topicsData = [
     {
@@ -133,25 +183,25 @@ export default function Home({ experts }) {
       id: 2,
       title: "What languages can I study in?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "We cooperate with experts from all over the world, so the language of the event can be any, based on your request.",
     },
     {
       id: 3,
-      title: "What if the language spoken in the company does not correspond to the language?",
+      title: "What if the language spoken in the company does not correspond to the language of a potential expert?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "We are sure that the language barrier should not become an obstacle on the way to education. Therefore, our team is always ready to provide a simultaneous translation service for the event. We have been cooperating with the best UN translators for many years, so you don't have to worry about the professionalism and quality of the translation.",
     },
     {
       id: 4,
       title: "How long does it take to find and choose an expert?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "The timing directly depends on your request. Most often, no more than 2 weeks pass from the moment we receive the application to the approval of the speaker by the client.",
     },
     {
       id: 5,
       title: "Is it possible to request more than one expert for several events?",
       content:
-        "We offer a variety of training formats — from an hour-long online consultation to multi-module offline programs. Almost everything is possible, it completely depends on your wishes. If you are not exactly sure what you need, we will recommend the best option based on your goals.",
+        "Sure, we do not limit you in the number of experts. We can help you find several specialists for a number of events at once, just include this information in the application.",
     },
   ];
 
@@ -274,7 +324,7 @@ export default function Home({ experts }) {
             </div>
           </section>
 
-          <CallbackSmall />
+          <CallbackSmall link="#quiz" />
 
           <TextLine />
 
@@ -291,7 +341,6 @@ export async function getServerSideProps() {
   const res = await axios.get(`https://ca-production.coursalytics.com/api/homepage/popular_courses`);
   const expRes = await axios.get("https://ca-production.coursalytics.com/api/homepage/experts");
   const topics = await res.data;
-
   const experts = await expRes.data;
   return { props: { topics, experts } };
 }

@@ -1,3 +1,4 @@
+export { PriceDependResearch } from "./PriceDependResearch/PriceDepend";
 export { CheckItems } from "./CheckItems/CheckItems";
 export { ExpertsFour } from "./ExpertsFour/ExpertsFour";
 export { WeOrganize } from "./WeOrganize/WeOrganize";

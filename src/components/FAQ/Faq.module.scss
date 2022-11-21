@@ -10,11 +10,23 @@
   display: flex;
 }
 
+.top {
+  p {
+    line-height: 130%;
+  }
+}
+
+.content {
+  p {
+    line-height: 150%;
+  }
+}
+
 .tab__title {
   cursor: pointer;
   font-weight: 400;
   font-size: 25px;
-  line-height: 50px;
+  line-height: 120%;
 }
 
 .icon {

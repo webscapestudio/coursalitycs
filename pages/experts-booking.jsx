@@ -98,16 +98,16 @@ export default function Experts() {
     },
     {
       id: 2,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Women’s Executive Leadership Program at Berkeley",
+      name: "Not-for-profit organization leader from North America",
+      text: "Personal leadership style evaluations from peers, employers, direct-reports, etc., provided in advance allowed the faculty to provide very tailored feedback to individuals. Extremely helpful!",
       img: Reviews2,
     },
     {
       id: 3,
-      title: "Digital Strategies for Business at Columbia Business School",
-      name: "Talent Development Leader at a global consulting company from North America",
-      text: "«The course provided me with significant opportunities to learn and think about things differently. It gave me a broad appreciation for digital disruption and the transformation taking place across industries.»",
+      title: "Advanced Management Program at Wharton",
+      name: "C-level executive of a multibillion IT corporation headquartered in India",
+      text: "Most of us usually stick to a single industry. I certainly did. At Wharton there were people from a very diverse set of industries. Meeting them made me realise that there is a world outside banking as well.",
       img: Reviews3,
     },
   ];
