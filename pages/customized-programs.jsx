@@ -24,8 +24,9 @@ import Reviews3 from "../public/img/reviews/3.jpg";
 import MainLayout from "../src/layouts/MainLayout";
 import { Title } from "../src/ui";
 import s from "./customized-programs.module.scss";
+import axios from "axios";
 
-export default function CustomizedPrograms() {
+export default function CustomizedPrograms({ experts }) {
   const HowItWorksData = [
     {
       id: 1,
@@ -52,33 +53,6 @@ export default function CustomizedPrograms() {
     "Research on trends and the most relevant topics and skills in your industry and globally",
     "Building a training program: selection of topics and formats, individual and group assignments, additional materials",
     "Selection, booking and managing experts who will be the best match for you goals",
-  ];
-
-  const ExpertsData = [
-    {
-      id: 1,
-      image: "/img/experts/1.jpg",
-      name: "Robin Speculand",
-      description: "Adjunct faculty member at National University of Singapore",
-    },
-    {
-      id: 2,
-      image: "/img/experts/2.jpg",
-      name: "Gianvito Lanzolla",
-      description: "Professor of Strategy at Bayes Business School",
-    },
-    {
-      id: 3,
-      image: "/img/experts/3.jpg",
-      name: "Antonio Nieto Rodriguez",
-      description: "Independent Project Management Expert at Vlerick Business School",
-    },
-    {
-      id: 4,
-      image: "/img/experts/4.jpg",
-      name: "Konstantin Korotov ",
-      description: "Associate Professor of Organizational Behavior at ESMT Berlin",
-    },
   ];
 
   const examplesData = [
@@ -200,6 +174,7 @@ export default function CustomizedPrograms() {
     },
   ];
 
+  console.log(experts, "asd");
   return (
     <>
       <Head>
@@ -234,7 +209,7 @@ export default function CustomizedPrograms() {
             "experience is trusted not only by us, but also by many organizations ",
             <span>around the world</span>,
           ]}
-          data={ExpertsData}
+          data={experts}
         />
 
         <CheckItems data={CheckData} className />
@@ -306,4 +281,8 @@ export default function CustomizedPrograms() {
   );
 }
 
-// https://ca-production.coursalytics.com/api/homepage/experts
+export async function getServerSideProps() {
+  const expRes = await axios.get("https://ca-production.coursalytics.com/api/homepage/experts?limit=7");
+  const experts = await expRes.data.experts;
+  return { props: { experts } };
+}
