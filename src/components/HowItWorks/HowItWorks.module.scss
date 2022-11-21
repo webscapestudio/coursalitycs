@@ -35,7 +35,8 @@
 
 .div {
   margin: 0 20px;
-  height: 110px;
+  height: auto;
+  align-self: stretch;
   background: $gray;
   width: 1px;
   &:last-of-type {
