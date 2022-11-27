@@ -7,57 +7,9 @@ import { Button, SliderArrow, Title } from "../../ui";
 import { IndexCard } from "../IndexCard/IndexCard";
 import s from "./CoursesSlider.module.scss";
 
-export const CoursesSlider = () => {
+export const CoursesSlider = ({data}) => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
-  const infoCards = [
-    {
-      id: 1,
-      title: "Advanced Human Resource Executive Program",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jul 11—22, 2022",
-    },
-    {
-      id: 2,
-      title: "The Positive Leader: Deep Change and Organizational Transformation",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jun 19—24, 2022",
-    },
-    {
-      id: 3,
-      title: "The Manchester Leadership Development Programme",
-      address: "Alliance Manchester Business School",
-      map: "Manchester, United Kingdom",
-      date: "Jul 4—8, 2022",
-    },
-    {
-      id: 4,
-      title: "Strategic Human Resource Leadership",
-      address: "Rotman School of Management",
-      map: "Toronto, Ontario, Canada",
-      date: "May 2—6, 2022",
-    },
-    {
-      id: 5,
-      title: "Leading Strategic Growth and Change",
-      address: "Columbia Business School",
-      map: "New York, United States",
-      date: "Jul 11—22, 2022",
-    },
-  ];
-
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const responce = await axios.get("https://ca-production.coursalytics.com/api/homepage/popular_courses");
-      console.log(responce);
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <section className={s.section}>
@@ -124,8 +76,8 @@ export const CoursesSlider = () => {
             },
           }}
         >
-          {infoCards.map((item) => (
-            <SwiperSlide key={item.id}>
+          {data.map((item, idx) => (
+            <SwiperSlide key={idx}>
               <IndexCard item={item} />
             </SwiperSlide>
           ))}

@@ -41,7 +41,7 @@ import expert4 from "../src/components/ExpertsSlider/assets/Shahzad_Ansari.jpg";
 import expert5 from "../src/components/ExpertsSlider/assets/Serguei_Netessine.jpg";
 import axios from "axios";
 
-export default function Home({ experts }) {
+export default function Home({ experts, topics }) {
   const expertsData = [
     {
       id: 1,
@@ -294,7 +294,7 @@ export default function Home({ experts }) {
             </div>
           </section>
 
-          <CoursesSlider />
+          <CoursesSlider data={topics.courses}/>
 
           <ExpertsSlider data={expertsData} />
 
