@@ -34,8 +34,9 @@ import UsersIcon from "../public/img/examples/users.svg";
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
+import axios from "axios";
 
-export default function Programs() {
+export default function Programs({topics}) {
   const infoCards = [
     {
       id: 1,
@@ -73,6 +74,7 @@ export default function Programs() {
       date: "Jul 11—22, 2022",
     },
   ];
+
   const howData = [
     {
       id: 1,
@@ -197,6 +199,7 @@ export default function Programs() {
       ],
     },
   ];
+
   return (
     <>
       <Head>
@@ -229,7 +232,7 @@ export default function Programs() {
         </section>
         <HowItWorks data={howData} title={["How", <span> it works</span>]} />
         <HelpToEnroll />
-        <CoursesSlider />
+        <CoursesSlider data={topics.courses}/>
         <CardFeaturesSection />
         <section className={s.callback}>
           <div className="container">
@@ -245,4 +248,11 @@ export default function Programs() {
       </MainLayout>
     </>
   );
+}
+
+
+export async function getServerSideProps() {
+  const res = await axios.get(`https://ca-production.coursalytics.com/api/homepage/popular_courses`);
+  const topics = await res.data;
+  return { props: { topics } };
 }

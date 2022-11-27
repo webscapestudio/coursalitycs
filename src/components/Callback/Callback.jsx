@@ -2,9 +2,9 @@
 import Image from "next/image";
 import s from "./Callback.module.scss";
 import Billy from "./billy.png";
-import Sended from "./sended.png";
 import { Button, Checkbox, Input, Title } from "../../ui";
 import Link from "next/link";
+import Sended from "./sended.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -16,7 +16,7 @@ export const Callback = () => {
   const schema = yup
     .object()
     .shape({
-      email: yup.string().required(),
+      email: yup.string().required().email(),
       name: yup.string().required(),
     })
     .required();
