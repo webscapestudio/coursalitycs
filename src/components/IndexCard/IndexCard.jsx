@@ -4,7 +4,6 @@ import PinIcon from "./pin.svg"
 import Link from "next/link";
 
 export const IndexCard = ({ item }) => {
-  console.log(item);
   return (
     <Link href={`https://coursalytics.com/courses/${item.slug}`}>
     <div className={s.card}>

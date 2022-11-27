@@ -14,13 +14,13 @@ export const HeaderLink = ({
   ...props
 }) => {
   let { ref, isOpen, setIsOpen } = useOutsideClick(false);
+
   const openMenu = () => {
-    console.log(isOpen);
     setIsOpen(!isOpen);
   };
 
   const closeMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
 
   return (
@@ -32,8 +32,13 @@ export const HeaderLink = ({
             [s.link__sub]: sub || subTopics,
           })}
           {...props}
+
           onClick={() => {
-            openMenu(!isOpen);
+            if(isOpen) {
+            openMenu(false);
+            } else {
+              openMenu(true);
+            }
           }}
         >
           {children}
@@ -86,9 +91,9 @@ export const HeaderLink = ({
                     {item.icon}
                     <div className={s.drop__item_info}>
                       <h4>{item.title}</h4>
-                      {item.link && (
+                      {/* {item.link && (
                         <p className={s.drop__item_link}>Over 150 topics</p>
-                      )}
+                      )} */}
                     </div>
                   </a>
                 </Link>

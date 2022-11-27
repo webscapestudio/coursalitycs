@@ -24,7 +24,7 @@ export const Header = () => {
     {
       id: 1,
       title: "Services",
-      link: "",
+      link: "javascript:void(0)",
       sub: [
         {
           id: 1,
@@ -55,7 +55,7 @@ export const Header = () => {
     {
       id: 2,
       title: "Topics",
-      link: "",
+      link: "javascript:void(0)",
       subTopics: [
         {
           id: 1,
