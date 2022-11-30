@@ -1,8 +1,8 @@
-import Head from "next/head"
-import { Catalog, Filter, HowItWorks } from "../../src/components"
-import MainLayout from "../../src/layouts/MainLayout"
-import { Title } from "../../src/ui"
-import s from "./index.module.scss"
+import Head from "next/head";
+import { Catalog, Filter, HowItWorks } from "../../src/components";
+import MainLayout from "../../src/layouts/MainLayout";
+import { Title } from "../../src/ui";
+import s from "./index.module.scss";
 
 export default function CoursesPage() {
   const howData = [
@@ -26,7 +26,7 @@ export default function CoursesPage() {
       num: "25",
       title: "languages",
     },
-  ]
+  ];
 
   return (
     <>
@@ -62,5 +62,5 @@ export default function CoursesPage() {
         </section>
       </MainLayout>
     </>
-  )
+  );
 }
