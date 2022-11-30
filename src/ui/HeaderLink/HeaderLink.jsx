@@ -32,10 +32,9 @@ export const HeaderLink = ({
             [s.link__sub]: sub || subTopics,
           })}
           {...props}
-
           onClick={() => {
-            if(isOpen) {
-            openMenu(false);
+            if (isOpen) {
+              openMenu(false);
             } else {
               openMenu(true);
             }
@@ -102,7 +101,12 @@ export const HeaderLink = ({
               <Link href=".">
                 <a className={cn(s.drop__item, s.center)}>
                   <div className={cn(s.drop__item_info)}>
-                    <Button style="accent">See all topic</Button>
+                    <Button
+                      link="https://coursalytics.com/topics/finance"
+                      style="accent"
+                    >
+                      See all topic
+                    </Button>
                   </div>
                 </a>
               </Link>
