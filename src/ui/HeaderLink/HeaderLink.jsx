@@ -98,7 +98,7 @@ export const HeaderLink = ({
                 </Link>
               ))}
 
-              <Link href=".">
+              <Link href="javascript:void(0)">
                 <a className={cn(s.drop__item, s.center)}>
                   <div className={cn(s.drop__item_info)}>
                     <Button
