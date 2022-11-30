@@ -102,7 +102,7 @@ export const HeaderLink = ({
                 <a className={cn(s.drop__item, s.center)}>
                   <div className={cn(s.drop__item_info)}>
                     <Button
-                      link="https://coursalytics.com/topics/finance"
+                      link="https://coursalytics.com/topics"
                       style="accent"
                     >
                       See all topic
