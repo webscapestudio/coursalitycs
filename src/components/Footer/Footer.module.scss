@@ -38,7 +38,7 @@
 }
 
 .footer__btn {
-  margin-top: 20px;
+  // margin-top: 20px;
   display: inline-block;
   background: #f9f9f9;
 }
@@ -66,6 +66,13 @@
 
 .socials {
   margin-left: auto;
+}
+
+.form__bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 @media (max-width: 1200px) {
