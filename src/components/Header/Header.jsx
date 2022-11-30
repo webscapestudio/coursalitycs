@@ -108,7 +108,7 @@ export const Header = () => {
         },
       ],
     },
-    { id: 3, title: "Courses", link: "/courses" },
+    { id: 3, title: "Courses", link: "https://coursalytics.com/courses" },
     { id: 4, title: "Experts", link: "/experts-booking" },
     { id: 5, title: "About us", link: "/about" },
   ];
@@ -137,7 +137,12 @@ export const Header = () => {
             })}
           >
             {links.map((item) => (
-              <HeaderLink key={item.id} sub={item.sub} subTopics={item.subTopics} link={item.link}>
+              <HeaderLink
+                key={item.id}
+                sub={item.sub}
+                subTopics={item.subTopics}
+                link={item.link}
+              >
                 {item.title}
               </HeaderLink>
             ))}
