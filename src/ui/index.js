@@ -1,3 +1,4 @@
+export { Succes } from "./Succes/Succes";
 export { Textarea } from "./Textarea/Textarea";
 export { ProgressBar } from "./ProgressBar/ProgressBar";
 export { Radio } from "./Radio/Radio";

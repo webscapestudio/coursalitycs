@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button, Title } from "../../ui";
+import { ModalWrapper } from "../Modals/Modal";
 import { ProgramItem } from "./ProgramItem";
 import s from "./ProgramsSection.module.scss";
 
 export const ProgramsSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [serviceName, setServiceName] = useState("");
   return (
     <section className={s.section}>
       <div className="container-xl">
@@ -21,6 +25,8 @@ export const ProgramsSection = () => {
               "Duration 1 week",
             ]}
             description="This service does not require any initial competencies"
+            isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
           />
 
           <ProgramItem
@@ -34,6 +40,8 @@ export const ProgramsSection = () => {
               "Duration 1 week",
             ]}
             description="For this service, you must already have an understanding of your strengths and areas in which education will provide value"
+            isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
           />
 
           <ProgramItem
@@ -47,9 +55,18 @@ export const ProgramsSection = () => {
               "Conducting research to produce outstanding resumes and motivation letters ",
             ]}
             description="Assistance in determining educational needs and Selection of programs are included"
+            isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
           />
         </div>
       </div>
+
+      <ModalWrapper
+        isModalOpen={isModalOpen}
+        serviceName={serviceName}
+        setServiceName={setServiceName}
+        setIsModalOpen={setIsModalOpen}
+      />
     </section>
   );
 };

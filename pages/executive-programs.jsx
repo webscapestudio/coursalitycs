@@ -3,136 +3,48 @@ import Head from "next/head";
 import ReactTypingEffect from "react-typing-effect";
 import {
   BuisnessSchools,
-  Callback,
   CallbackPeoples,
   CallbackSmall,
   CardFeaturesSection,
   CoursesSlider,
-  Examples,
   Faq,
   HelpToEnroll,
   HowItWorks,
-  IndexCard,
-  PriceDepend,
   ProgramsSection,
-  Reviews,
   ReviewsSection,
   TextLine,
 } from "../src/components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper";
+
 import MainLayout from "../src/layouts/MainLayout";
-import { Button, SliderArrow, Title } from "../src/ui";
+import { Title } from "../src/ui";
 import s from "./programs.module.scss";
-import { useRef } from "react";
-import cn from "classnames";
-import ArrowIcon from "../public/img/examples/arrow.svg";
-import DataIcon from "../public/img/examples/data.svg";
-import ListIcon from "../public/img/examples/list.svg";
-import PenIcon from "../public/img/examples/pen.svg";
-import UsersIcon from "../public/img/examples/users.svg";
+
 import Reviews1 from "../public/img/reviews/1.jpg";
 import Reviews2 from "../public/img/reviews/2.jpg";
 import Reviews3 from "../public/img/reviews/3.jpg";
 import axios from "axios";
+import { useState } from "react";
+import { createContext } from "react";
 
-export default function Programs({topics}) {
-  const infoCards = [
-    {
-      id: 1,
-      title: "Advanced Human Resource Executive Program",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jul 11—22, 2022",
-    },
-    {
-      id: 2,
-      title: "The Positive Leader: Deep Change and Organizational Transformation",
-      address: "Stephen M. Ross School of Business",
-      map: "Ann Arbor, Michigan, United States",
-      date: "Jun 19—24, 2022",
-    },
-    {
-      id: 3,
-      title: "The Manchester Leadership Development Programme",
-      address: "Alliance Manchester Business School",
-      map: "Manchester, United Kingdom",
-      date: "Jul 4—8, 2022",
-    },
-    {
-      id: 4,
-      title: "Strategic Human Resource Leadership",
-      address: "Rotman School of Management",
-      map: "Toronto, Ontario, Canada",
-      date: "May 2—6, 2022",
-    },
-    {
-      id: 5,
-      title: "Leading Strategic Growth and Change",
-      address: "Columbia Business School",
-      map: "New York, United States",
-      date: "Jul 11—22, 2022",
-    },
-  ];
-
+export default function Programs({ topics }) {
   const howData = [
     {
       id: 1,
       num: "01",
-      title: "Tell us about your learning objectives and educational programs of interest",
+      title:
+        "Tell us about your learning objectives and educational programs of interest",
     },
     {
       id: 2,
       num: "02",
-      title: "Make the best program choice with the help of our recommendations and coaching sessions",
+      title:
+        "Make the best program choice with the help of our recommendations and coaching sessions",
     },
     {
       id: 3,
       num: "03",
-      title: "Let us take over the organization of your admission (except what can't be done without you)",
-    },
-  ];
-
-  const examplesData = [
-    {
-      id: 1,
-      icon: ArrowIcon,
-      title: "A series of 30+ thought leadership seminars",
-      text: "by top professors on business topics of importance in the post-COVID-19 world for an omni-channel media holding",
-    },
-
-    {
-      id: 2,
-      icon: ListIcon,
-      title: "4-hour workshop with an artificial intelligence C-level practitioner",
-      text: "from a billion-dollar corporation for one of the largest mining companies",
-    },
-
-    {
-      id: 3,
-      icon: DataIcon,
-      title: "A series of 4 four-hour live online seminars",
-      text: "on HR Innovation with educators from top US business schools for a leading media company",
-    },
-
-    {
-      id: 4,
-      icon: UsersIcon,
-      title: "1-day live online seminar",
-      text: "with an expert in cross-cultural communication for a national oil company",
-    },
-
-    {
-      id: 5,
-      icon: UsersIcon,
-      title: "A series of 4 one-on-one mentorship",
-      text: "sessions with a music business management expert for a serial entrepreneur",
-    },
-    {
-      id: 6,
-      icon: PenIcon,
-      title: "1-hour foresight session",
-      text: "with a leading future scenario planning thinker for a global metals and mining company",
+      title:
+        "Let us take over the organization of your admission (except what can't be done without you)",
     },
   ];
 
@@ -200,6 +112,10 @@ export default function Programs({topics}) {
     },
   ];
 
+  const [isModalOpen, setisModalOpen] = useState(false);
+  const context = createContext();
+  console.log(context);
+
   return (
     <>
       <Head>
@@ -224,7 +140,7 @@ export default function Programs({topics}) {
                   "schools of public administration",
                   "law schools",
                 ]}
-              />{" "}
+              />
               <br />
               all over the world
             </Title>
@@ -232,7 +148,7 @@ export default function Programs({topics}) {
         </section>
         <HowItWorks data={howData} title={["How", <span> it works</span>]} />
         <HelpToEnroll />
-        <CoursesSlider data={topics.courses}/>
+        <CoursesSlider data={topics.courses} />
         <CardFeaturesSection />
         <section className={s.callback}>
           <div className="container">
@@ -250,9 +166,10 @@ export default function Programs({topics}) {
   );
 }
 
-
 export async function getServerSideProps() {
-  const res = await axios.get(`https://ca-production.coursalytics.com/api/homepage/popular_courses`);
+  const res = await axios.get(
+    `https://ca-production.coursalytics.com/api/homepage/popular_courses`
+  );
   const topics = await res.data;
   return { props: { topics } };
 }

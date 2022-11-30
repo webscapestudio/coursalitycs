@@ -9,7 +9,12 @@ export const ProgramItem = ({
   description,
   subprice,
   active,
+  isModalOpen,
+  setIsModalOpen,
 }) => {
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
   return (
     <div
       className={cn(s.item, {
@@ -31,7 +36,7 @@ export const ProgramItem = ({
 
       <p className={s.subtext}>{description}</p>
 
-      <Button style="accent" className={s.btn}>
+      <Button style="accent" onClick={openModal} className={s.btn}>
         Apply now
       </Button>
     </div>

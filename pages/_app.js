@@ -1,12 +1,11 @@
-import "../node_modules/normalize.css/normalize.css"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "../styles/globals.scss"
+import "../node_modules/normalize.css/normalize.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../styles/globals.scss";
 
-import { wrapper } from "../src/store/store"
-import CookieConsent from "react-cookie-consent"
-import Swiper from "swiper"
+import { wrapper } from "../src/store/store";
+import CookieConsent from "react-cookie-consent";
 
 function App({ Component, pageProps }) {
   return (
@@ -33,7 +32,7 @@ function App({ Component, pageProps }) {
         </p>
       </CookieConsent>
     </>
-  )
+  );
 }
 
 App.getInitialProps = wrapper.getInitialAppProps(
@@ -41,18 +40,18 @@ App.getInitialProps = wrapper.getInitialAppProps(
     async ({ ctx, Component }) => {
       try {
       } catch (err) {
-        console.log(err)
+        console.log(err);
         return {
           props: {},
-        }
+        };
       }
 
       return {
         pageProps: Component.getInitialProps
           ? await Component.getInitialProps({ ...ctx, store })
           : {},
-      }
+      };
     }
-)
+);
 
-export default wrapper.withRedux(App)
+export default wrapper.withRedux(App);

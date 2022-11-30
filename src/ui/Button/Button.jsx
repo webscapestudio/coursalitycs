@@ -2,7 +2,17 @@ import cn from "classnames";
 import Link from "next/link";
 import s from "./Button.module.scss";
 
-export const Button = ({ link, type, size, style, rounded, className, children, submit }) => {
+export const Button = ({
+  link,
+  type,
+  size,
+  style,
+  rounded,
+  className,
+  children,
+  submit,
+  ...props
+}) => {
   if (link) {
     return (
       <Link href={link}>
@@ -31,6 +41,7 @@ export const Button = ({ link, type, size, style, rounded, className, children, 
           [s.sm]: size == "sm",
         })}
         type="submit"
+        {...props}
       >
         {children}
       </button>
@@ -45,6 +56,7 @@ export const Button = ({ link, type, size, style, rounded, className, children, 
         [s.md]: size === "md",
         [s.sm]: size == "sm",
       })}
+      {...props}
     >
       {children}
     </button>
