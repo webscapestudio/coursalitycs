@@ -48,7 +48,8 @@ export default function Home({ experts, topics }) {
       photo: expert1,
       name: "Helio Fred Garcia",
       text: "I’ve had the good fortune of working in a world of crisis for nearly 40 years teaching it for more than 30 years. And one thing that I and my firm find when we study crises is they follow predictable patterns. There are predictable patterns of human behavior which you know from a marketing perspective, but there are also predictable patterns of organizational behavior, of stakeholder behavior when things go wrong.",
-      position: "Adjunct Associate Professor of Professional Development and Leadership at Columbia Engineering",
+      position:
+        "Adjunct Associate Professor of Professional Development and Leadership at Columbia Engineering",
     },
     {
       id: 2,
@@ -66,14 +67,16 @@ export default function Home({ experts, topics }) {
       photo: expert3,
       name: "Massimo Massa",
       text: "The common thing of all fintech innovation is the backbone of the new people. So what is the new common thing of this economy? It’s the economy of shared resources. If you think about Airbnb we share homes and if you think about Uber we share carpool. If we think about fintech we share a platform so the new economy of fintech is the economy where we try to reduce the waste of resources we believe and trust in each other and we believe in the environment. It’s an economy in which ironically technology is not the most important thing, but a trust among people is.",
-      position: "Professor of Finance and Co-Director of the Hoffmann Research Fund at INSEAD Business School",
+      position:
+        "Professor of Finance and Co-Director of the Hoffmann Research Fund at INSEAD Business School",
     },
     {
       id: 4,
       photo: expert4,
       name: "Shahzad Ansari",
       text: "I think one of the core things over here is “Is the company innovation-ready?”, which means that “Do you have an innovation mindset?” So you just don’t launch an innovation. It should fit with your overall strategic goals. So it’s not about launching an innovation, it's about having an innovation strategy in order to accomplish the goals that you have.",
-      position: "Professor of Strategy & Innovation at Cambridge Judge Business School",
+      position:
+        "Professor of Strategy & Innovation at Cambridge Judge Business School",
     },
     {
       id: 5,
@@ -187,7 +190,8 @@ export default function Home({ experts, topics }) {
     },
     {
       id: 3,
-      title: "What if the language spoken in the company does not correspond to the language of a potential expert?",
+      title:
+        "What if the language spoken in the company does not correspond to the language of a potential expert?",
       content:
         "We are sure that the language barrier should not become an obstacle on the way to education. Therefore, our team is always ready to provide a simultaneous translation service for the event. We have been cooperating with the best UN translators for many years, so you don't have to worry about the professionalism and quality of the translation.",
     },
@@ -199,7 +203,8 @@ export default function Home({ experts, topics }) {
     },
     {
       id: 5,
-      title: "Is it possible to request more than one expert for several events?",
+      title:
+        "Is it possible to request more than one expert for several events?",
       content:
         "Sure, we do not limit you in the number of experts. We can help you find several specialists for a number of events at once, just include this information in the application.",
     },
@@ -221,20 +226,31 @@ export default function Home({ experts, topics }) {
                   Start learning smarter <span>now</span>
                 </Title>
                 <p className={s.hero__subtitle}>
-                  We make it easy to find, compare, and book executive programs and individual experts time for meetings
-                  live online and in-person all over the world
+                  We make it easy to find, compare, and book executive programs
+                  and individual experts time for meetings live online and
+                  in-person all over the world
                 </p>
 
                 <div className={s.hero__btn}>
-                  <Button link="https://coursalytics.com/experts-catalog">Search Experts</Button>
-                  <Button style="accent" link="https://coursalytics.com/courses">
+                  <Button link="https://coursalytics.com/experts-booking">
+                    Search Experts
+                  </Button>
+                  <Button
+                    style="accent"
+                    link="https://coursalytics.com/courses"
+                  >
                     Browse Courses
                   </Button>
                 </div>
 
                 <div className={s.hero__info}>
                   <div className="hero__image">
-                    <Image src={billy} width={"204px"} height={"224px"} alt="coursalytics" />
+                    <Image
+                      src={billy}
+                      width={"204px"}
+                      height={"224px"}
+                      alt="coursalytics"
+                    />
                   </div>
 
                   <div className={s.hero__info_item}>
@@ -260,7 +276,12 @@ export default function Home({ experts, topics }) {
                   <div className={s.hero__user}>
                     <div className={s.hero__user_top}>
                       <div className={s.hero__user_img}>
-                        <Image src={HeroUserImage} width="33px" height="33px" alt="User" />
+                        <Image
+                          src={HeroUserImage}
+                          width="33px"
+                          height="33px"
+                          alt="User"
+                        />
 
                         <div className={s.status}></div>
                       </div>
@@ -294,7 +315,7 @@ export default function Home({ experts, topics }) {
             </div>
           </section>
 
-          <CoursesSlider data={topics.courses}/>
+          <CoursesSlider data={topics.courses} />
 
           <ExpertsSlider data={expertsData} />
 
@@ -338,8 +359,12 @@ export default function Home({ experts, topics }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get(`https://ca-production.coursalytics.com/api/homepage/popular_courses`);
-  const expRes = await axios.get("https://ca-production.coursalytics.com/api/homepage/experts");
+  const res = await axios.get(
+    `https://ca-production.coursalytics.com/api/homepage/popular_courses`
+  );
+  const expRes = await axios.get(
+    "https://ca-production.coursalytics.com/api/homepage/experts"
+  );
   const topics = await res.data;
   const experts = await expRes.data;
   return { props: { topics, experts } };
