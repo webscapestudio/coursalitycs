@@ -349,7 +349,7 @@ export default function Home({ experts, topics }) {
 
           <TextLine />
 
-          <Quiz formId="nbpvPpyj" />
+          <Quiz id="quiz" formId="nbpvPpyj" />
 
           <Faq data={faqData} />
         </main>
