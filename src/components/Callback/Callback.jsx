@@ -30,7 +30,9 @@ export const Callback = () => {
   });
 
   const onSubmit = (data) => {
-    axios.post("https://ca-production.coursalytics.com/api/request/info", data).then(setIsSend(true));
+    axios
+      .post("https://ca-production.coursalytics.com/api/request/info", data)
+      .then(setIsSend(true));
   };
 
   return (
@@ -45,7 +47,10 @@ export const Callback = () => {
               Interested to <span>learn more?</span>
             </Title>
 
-            <p>Contact us and our team members will reach out to discuss your learning objectives.</p>
+            <p>
+              Discover the cutting-edge techniques in executive <br /> education
+              and see how we put them into practice.
+            </p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input
@@ -90,7 +95,10 @@ export const Callback = () => {
               Thank you for <span>submitting!</span>
             </Title>
 
-            <p>Our team members will reach out to discuss your learning objectives.</p>
+            <p>
+              Our team members will reach out to discuss your learning
+              objectives.
+            </p>
           </div>
         </div>
       )}
