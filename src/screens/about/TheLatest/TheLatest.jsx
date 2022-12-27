@@ -1,4 +1,4 @@
-import { Title } from "../../../ui";
+import { Button, Title } from "../../../ui";
 import s from "./TheLatest.module.scss";
 import Img1 from "./1.jpg";
 import Img2 from "./2.jpg";
@@ -59,12 +59,25 @@ export const TheLatest = () => {
                   <p className={s.card__author}>{item.author}</p>
                 </div>
                 <div className={s.card__right}>
-                  <Image src={item.image} width="120" height="120" alt={item.title} />
+                  <Image
+                    src={item.image}
+                    width="120"
+                    height="120"
+                    alt={item.title}
+                  />
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        <Button
+          style="accent"
+          className={s.btn}
+          link="https://coursalytics.com/blog/"
+        >
+          View all
+        </Button>
       </div>
     </section>
   );

@@ -114,7 +114,7 @@ export default function AboutPage({ topics }) {
 
         <MeetOurTeam />
 
-        <CoursesSlider data={topics.courses} />
+        {/* <CoursesSlider data={topics.courses} /> */}
 
         <TheLatest />
 

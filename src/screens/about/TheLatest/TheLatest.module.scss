@@ -73,6 +73,12 @@
   border-radius: 15px;
 }
 
+.btn {
+  margin: 40px auto 0;
+  display: block;
+  max-width: 200px;
+}
+
 @media (max-width: 1440px) {
   .card {
     padding: 30px 30px;
