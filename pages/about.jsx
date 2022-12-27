@@ -10,10 +10,18 @@ import ListIcon from "../public/img/examples/list.svg";
 import PenIcon from "../public/img/examples/pen.svg";
 import UsersIcon from "../public/img/examples/users.svg";
 import { Widget } from "@typeform/embed-react";
-import { Callback, CallbackTextarea, CoursesSlider, Examples, HowItWorks, WeServe } from "../src/components";
+import {
+  Callback,
+  CallbackTextarea,
+  CoursesSlider,
+  Examples,
+  HowItWorks,
+  WeServe,
+} from "../src/components";
 import { MeetOurTeam, TheLatest } from "../src/screens";
+import axios from "axios";
 
-export default function AboutPage() {
+export default function AboutPage({ topics }) {
   const hiwdata = [
     { id: 1, num: "2015", title: "Year founded" },
     { id: 2, num: "6", title: `Сountries of team members` },
@@ -62,9 +70,11 @@ export default function AboutPage() {
             <div className={s.wrap}>
               <div className={s.left}>
                 <Title tag="h1" className={s.title}>
-                  <span>Coursalytics</span> is an Executive Education marketplace making it{" "}
-                  <span>easy to find, compare, and book </span> executive programs and individual experts time for
-                  meetings live online and in-person <span>all over the world</span>
+                  <span>Coursalytics</span> is an Executive Education
+                  marketplace making it{" "}
+                  <span>easy to find, compare, and book </span> executive
+                  programs and individual experts time for meetings live online
+                  and in-person <span>all over the world</span>
                 </Title>
 
                 <div className={s.btns}>
@@ -104,7 +114,7 @@ export default function AboutPage() {
 
         <MeetOurTeam />
 
-        <CoursesSlider />
+        <CoursesSlider data={topics.courses} />
 
         <TheLatest />
 
@@ -116,4 +126,16 @@ export default function AboutPage() {
       </MainLayout>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await axios.get(
+    `https://ca-production.coursalytics.com/api/homepage/popular_courses`
+  );
+  const expRes = await axios.get(
+    "https://ca-production.coursalytics.com/api/homepage/experts"
+  );
+  const topics = await res.data;
+  const experts = await expRes.data;
+  return { props: { topics, experts } };
 }
