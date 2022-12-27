@@ -1,3 +1,5 @@
+@import "styles/vars";
+
 .wrap {
   display: flex;
   align-items: flex-start;
@@ -7,5 +9,21 @@
     margin-left: 0 !important;
     max-width: 470px;
     width: 100%;
+
+    a {
+      color: $accent;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    input {
+      margin-top: 2px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 120%;
+    }
   }
 }

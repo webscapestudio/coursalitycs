@@ -1,3 +1,4 @@
+export { RequestModal } from "./Modals/RequestModal";
 export { PriceDependResearch } from "./PriceDependResearch/PriceDepend";
 export { CheckItems } from "./CheckItems/CheckItems";
 export { ExpertsFour } from "./ExpertsFour/ExpertsFour";

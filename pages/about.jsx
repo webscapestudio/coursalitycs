@@ -16,10 +16,12 @@ import {
   CoursesSlider,
   Examples,
   HowItWorks,
+  RequestModal,
   WeServe,
 } from "../src/components";
 import { MeetOurTeam, TheLatest } from "../src/screens";
 import axios from "axios";
+import { useState, Fragment } from "react";
 
 export default function AboutPage({ topics }) {
   const hiwdata = [
@@ -28,6 +30,16 @@ export default function AboutPage({ topics }) {
     { id: 3, num: "3000+", title: "People trained" },
     { id: 4, num: "200+", title: "Client engagements completed" },
   ];
+
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
 
   const examplesdata = [
     {
@@ -78,7 +90,9 @@ export default function AboutPage({ topics }) {
                 </Title>
 
                 <div className={s.btns}>
-                  <Button className={s.btn}>Request a demo</Button>
+                  <Button className={s.btn} onClick={openModal}>
+                    Request a demo
+                  </Button>
                 </div>
               </div>
 
@@ -124,6 +138,8 @@ export default function AboutPage({ topics }) {
           </div>
         </section>
       </MainLayout>
+
+      <RequestModal isOpen={isOpen} closeModal={closeModal} />
     </>
   );
 }
