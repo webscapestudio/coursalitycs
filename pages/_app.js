@@ -6,10 +6,23 @@ import "../styles/globals.scss";
 
 import { wrapper } from "../src/store/store";
 import CookieConsent from "react-cookie-consent";
+import Script from "next/script";
 
 function App({ Component, pageProps }) {
   return (
     <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-65953138-1"
+      />
+
+      <Script>
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-65953138-1');
+          `}
+      </Script>
       <Component {...pageProps} />
       <CookieConsent
         buttonText="Accept"
