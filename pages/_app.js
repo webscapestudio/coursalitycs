@@ -35,23 +35,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-App.getInitialProps = wrapper.getInitialAppProps(
-  (store) =>
-    async ({ ctx, Component }) => {
-      try {
-      } catch (err) {
-        console.log(err);
-        return {
-          props: {},
-        };
-      }
-
-      return {
-        pageProps: Component.getInitialProps
-          ? await Component.getInitialProps({ ...ctx, store })
-          : {},
-      };
-    }
-);
-
-export default wrapper.withRedux(App);
+export default App;

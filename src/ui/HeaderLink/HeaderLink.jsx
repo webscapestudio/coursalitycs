@@ -61,11 +61,9 @@ export const HeaderLink = ({
                     {item.icon}
                     <div className={s.drop__item_info}>
                       <h4>{item.title}</h4>
-                      {item.link && (
-                        <Link href={item.link}>
-                          <a className={s.drop__item_link}>Learn more</a>
-                        </Link>
-                      )}
+                      {/* {item.link && (
+                        <p className={s.drop__item_link}>Learn more</p>
+                      )} */}
                     </div>
                   </div>
                 </Link>

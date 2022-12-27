@@ -9,26 +9,28 @@ import Link from "next/link";
 export const TabsComponentMain = () => {
   const tabs = [
     {
-      id: 1,
-      title: "Experts’ booking",
-      text: "For in-house executive development programs, workshops, seminars and one-on-one consultations.",
-      link: "/experts-booking",
-      linkText: "Learn more",
-    },
-    {
       id: 2,
-      title: "Executive programs",
+      title: "Find an open program",
       text: "Selection and booking of executive programs offered by top business schools and non-university providers all over the world.",
       link: "/executive-programs",
       linkText: "Learn more",
     },
+
     {
       id: 3,
-      title: "Customized programs",
+      title: "Create a new program",
       text: "Development and delivery of customized live online programs for top managers led by world-leading educators and expert practitioners.",
       link: "/customized-programs",
       linkText: "Learn more",
     },
+    {
+      id: 1,
+      title: "Hire faculty for your program",
+      text: "For in-house executive development programs, workshops, seminars and one-on-one consultations.",
+      link: "/experts-booking",
+      linkText: "Learn more",
+    },
+
     {
       id: 4,
       title: "Research & Analytics",

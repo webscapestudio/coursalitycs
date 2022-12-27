@@ -17,13 +17,13 @@ export const Button = ({
     return (
       <Link href={link}>
         <a
-          target="_blank"
           className={cn(s.button, className, {
             [s.accent]: style === "accent",
             [s.red]: style === "red",
             [s.sm]: size === "sm",
             [s.md]: size === "md",
           })}
+          {...props}
         >
           {children}
         </a>

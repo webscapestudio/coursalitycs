@@ -226,20 +226,16 @@ export default function Home({ experts, topics }) {
                   Start learning smarter <span>now</span>
                 </Title>
                 <p className={s.hero__subtitle}>
-                  We make it easy to find, compare, and book executive programs
-                  and individual experts time for meetings live online and
-                  in-person all over the world
+                  Easily create and customize high-quality training programs for
+                  executives, with the help of renowned faculty
                 </p>
 
                 <div className={s.hero__btn}>
                   <Button link="https://coursalytics.com/experts-booking">
-                    Search Experts
+                    Learn More
                   </Button>
-                  <Button
-                    style="accent"
-                    link="https://coursalytics.com/courses"
-                  >
-                    Browse Courses
+                  <Button style="accent" link="#quiz">
+                    Get Started
                   </Button>
                 </div>
 
@@ -263,6 +259,10 @@ export default function Home({ experts, topics }) {
 
                   <div className={s.hero__info_item}>
                     <SearchIcon />
+                    <div className={s.info}>
+                      <h4>Advanced executive education</h4>
+                      <p>Based on real data</p>
+                    </div>
                   </div>
 
                   <div className={s.hero__info_item}>
@@ -287,11 +287,8 @@ export default function Home({ experts, topics }) {
                       </div>
                     </div>
                     <div className={s.info}>
-                      <h4>User Experience Class</h4>
+                      <h4>Leadership Class</h4>
                       <p>Today at 12.00 PM</p>
-                      <Button size="sm" style="red">
-                        Join Now
-                      </Button>
                     </div>
                   </div>
                 </div>
@@ -328,7 +325,7 @@ export default function Home({ experts, topics }) {
           <section className={s.topics__section}>
             <div className="container">
               <Title tag="h2" className={s.title}>
-                We offer programs in the most <span>topical fields</span>
+                We offer programs in the most <span>critical fields</span>
               </Title>
 
               <Topics data={topicsData} />
