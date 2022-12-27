@@ -16,7 +16,7 @@ export default function Document() {
           rel="stylesheet"
         />
 
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-65953138-1"
         ></script>
@@ -24,7 +24,7 @@ export default function Document() {
           window.dataLayer = window.dataLayer || []; function gtag()
           {dataLayer.push(arguments)}
           gtag('js', new Date()); gtag('config', 'UA-65953138-1');
-        </script>
+        </script> */}
       </Head>
       <body>
         <Main />

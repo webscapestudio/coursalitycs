@@ -2,7 +2,7 @@ import cn from "classnames";
 import s from "./Header.module.scss";
 import Link from "next/link";
 import LogoIcon from "./logo.svg";
-import { HeaderLink, Input } from "../../ui";
+import { Button, HeaderLink, Input } from "../../ui";
 import ExpertsIcon from "./icons/experts.svg";
 import ProgramsIcon from "./icons/programs.svg";
 import CustomizedIcon from "./icons/customized.svg";
@@ -147,17 +147,25 @@ export const Header = () => {
               </HeaderLink>
             ))}
           </nav>
-          <div
-            className={cn(s.burger, {
-              [s.active]: isOpen,
-            })}
-            onClick={showMenu}
-          >
-            <span></span>
+
+          <div className={s.right}>
+            <Button
+              size="sm"
+              link="https://nm3zw7qlnv7.typeform.com/to/nbpvPpyj#hubspot_utk=xxxxx&hubspot_page_name=xxxxx&hubspot_page_url=xxxxx"
+              className={s.getstarted__btn}
+              style="accent"
+            >
+              Get Started
+            </Button>
+            <div
+              className={cn(s.burger, {
+                [s.active]: isOpen,
+              })}
+              onClick={showMenu}
+            >
+              <span></span>
+            </div>
           </div>
-          {/* <div className={s.right}>
-             <Input placeholder="Enter keywords" /> 
-          </div> */}
         </div>
       </div>
     </header>
