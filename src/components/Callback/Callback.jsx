@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import Image from "next/image";
 import s from "./Callback.module.scss";
 import Billy from "./billy.png";
