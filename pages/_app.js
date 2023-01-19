@@ -7,8 +7,24 @@ import "../styles/globals.scss";
 import { wrapper } from "../src/store/store";
 import CookieConsent from "react-cookie-consent";
 import Script from "next/script";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("438489346669536");
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
   return (
     <>
       <Script
