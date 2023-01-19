@@ -9,6 +9,7 @@ import CookieConsent from "react-cookie-consent";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { LinkedInInsightTag } from "nextjs-linkedin-insight-tag";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -39,7 +40,7 @@ function App({ Component, pageProps }) {
           gtag('config', 'G-EGJFK0CGJ5');
           `}
       </Script>
-
+      <LinkedInInsightTag />
       <Component {...pageProps} />
       <CookieConsent
         buttonText="Accept"
