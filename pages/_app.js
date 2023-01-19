@@ -13,16 +13,17 @@ function App({ Component, pageProps }) {
     <>
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-65953138-1"
+        src="https://www.googletagmanager.com/gtag/js?id=G-EGJFK0CGJ5"
       />
 
       <Script>
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-65953138-1');
+          gtag('config', 'G-EGJFK0CGJ5');
           `}
       </Script>
+
       <Component {...pageProps} />
       <CookieConsent
         buttonText="Accept"
