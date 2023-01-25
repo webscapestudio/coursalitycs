@@ -20,7 +20,7 @@ export const MeetOurTeam = ({ className, title }) => {
       name: "Ilya Breyman",
       position: "Co-founder and CEO",
       text: "Ilya is an entrepreneur and HR expert with expertise in HR technology, venture capital, executive search, and executive education. He comes from a family of education entrepreneurs and holds advanced degrees from Georgetown and Penn. Despite his impressive credentials, Ilya maintains a self-ironic sense of humor and is always eager to learn and grow - except when it comes to his terrible golf game.",
-      expertise: ["Entrepreneurship", "Communication", "Leadership]"],
+      expertise: ["Entrepreneurship", "Communication", "Leadership"],
     },
     {
       id: 2,
@@ -34,8 +34,8 @@ export const MeetOurTeam = ({ className, title }) => {
       id: 3,
       image: exp3,
       name: "Alex Dolinskiy",
-      position: "Co-founder and Head of\nUniversity Relations",
-      text: "Ilya is an experienced entrepreneur in the field of education with a master's degree in this field from an Ivy League University. He is the founder of the first HR Tech investment fund. Ilya has been engaged in HR consulting for more than 10 years, and has also managed consulting projects for the government, NGOs, educational organizations, etc.",
+      position:
+        "Alex is a leadership development expert with a background in international relations and communications. With over 10 years of experience designing, leading, and evaluating programs, he has personally worked with hundreds of entrepreneurs and executives on their development. Alex is passionate about education technology and believes in its ability to drive positive change. Plus, he's a real whiz at choosing restaurants (unlike some people we know).",
       expertise: ["Business Model Innovation", "Negotiations", "Soft Power"],
     },
     {
