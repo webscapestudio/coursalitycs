@@ -34,8 +34,8 @@ export const MeetOurTeam = ({ className, title }) => {
       id: 3,
       image: exp3,
       name: "Alex Dolinskiy",
-      position:
-        "Alex is a leadership development expert with a background in international relations and communications. With over 10 years of experience designing, leading, and evaluating programs, he has personally worked with hundreds of entrepreneurs and executives on their development. Alex is passionate about education technology and believes in its ability to drive positive change. Plus, he's a real whiz at choosing restaurants (unlike some people we know).",
+      position: "Co-founder and Head of University Relations",
+      text: "Alex is a leadership development expert with a background in international relations and communications. With over 10 years of experience designing, leading, and evaluating programs, he has personally worked with hundreds of entrepreneurs and executives on their development. Alex is passionate about education technology and believes in its ability to drive positive change. Plus, he's a real whiz at choosing restaurants (unlike some people we know).",
       expertise: ["Business Model Innovation", "Negotiations", "Soft Power"],
     },
     {

@@ -11,7 +11,6 @@ import axios from "axios";
 import { useState } from "react";
 
 export const CallbackGirl = () => {
-
   const [isSend, setIsSend] = useState(false);
   const schema = yup
     .object()
@@ -30,25 +29,27 @@ export const CallbackGirl = () => {
   });
 
   const onSubmit = async (data) => {
-   await axios.post("https://ca-production.coursalytics.com/api/request/info", data).then(setIsSend(true));
+    await axios
+      .post("https://ca-production.coursalytics.com/api/request/info", data)
+      .then(setIsSend(true));
   };
 
   return (
     <div className={s.callback}>
       {!isSend ? (
-      <div className={s.wrap}>
-        <div className={s.left}>
-          <Image src={Billy} layout="responsive" alt="billy" />
-        </div>
-        <div className={s.right}>
-          <Title tag="h3" className={s.title}>
-            Have questions or need <br /> <span>more information?</span>
-          </Title>
+        <div className={s.wrap}>
+          <div className={s.left}>
+            <Image src={Billy} layout="responsive" alt="billy" />
+          </div>
+          <div className={s.right}>
+            <Title tag="h3" className={s.title}>
+              Have questions or need <br /> <span>more information?</span>
+            </Title>
 
-          <p>Contact us and we'll find the best option for you.</p>
+            <p>Contact us and we'll find the best option for you.</p>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
-          <Input
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Input
                 className={s.input}
                 placeholder="Full name"
                 errorText={errors.name?.message}
@@ -62,23 +63,23 @@ export const CallbackGirl = () => {
                 errorText={errors.email?.message}
                 form={{ ...register("email") }}
               />
-            <div className={s.policy}>
-              <Checkbox />
-              <p>
-                I agree to{" "}
-                <Link href="website-terms-of-use">terms and conditions</Link> and to
-                the processing of my personal data to receive communication from
-                Coursalitycis and its partners
-              </p>
-            </div>
+              <div className={s.policy}>
+                <Checkbox />
+                <p>
+                  I agree to{" "}
+                  <Link href="website-terms-of-use">terms and conditions</Link>{" "}
+                  and to the processing of my personal data to receive
+                  communication from Coursalytics and its partners
+                </p>
+              </div>
 
-            <Button type="submit" className={s.btn} style="accent">
-              Submit
-            </Button>
-          </form>
+              <Button type="submit" className={s.btn} style="accent">
+                Submit
+              </Button>
+            </form>
+          </div>
         </div>
-      </div>
-      ) :(
+      ) : (
         <div className={s.wrap}>
           <div className={s.left}>
             <Image src={Sended} layout="responsive" alt="billy" />
@@ -88,7 +89,10 @@ export const CallbackGirl = () => {
               Thank you for <span>submitting!</span>
             </Title>
 
-            <p>Our team members will reach out to discuss your learning objectives.</p>
+            <p>
+              Our team members will reach out to discuss your learning
+              objectives.
+            </p>
           </div>
         </div>
       )}

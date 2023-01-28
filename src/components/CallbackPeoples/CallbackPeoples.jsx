@@ -29,7 +29,9 @@ export const CallbackPeoples = () => {
   });
 
   const onSubmit = (data) => {
-    axios.post("https://ca-production.coursalytics.com/api/request/info", data).then(setIsSend(true));
+    axios
+      .post("https://ca-production.coursalytics.com/api/request/info", data)
+      .then(setIsSend(true));
   };
 
   return (
@@ -45,32 +47,31 @@ export const CallbackPeoples = () => {
 
           <p>Contact us and we'll find the best option for you.</p>
 
-
           <form onSubmit={handleSubmit(onSubmit)}>
-              <Input
-                className={s.input}
-                placeholder="Full name"
-                errorText={errors.name?.message}
-                form={{ ...register("name") }}
-              />
+            <Input
+              className={s.input}
+              placeholder="Full name"
+              errorText={errors.name?.message}
+              form={{ ...register("name") }}
+            />
 
-              <Input
-                className={s.input}
-                placeholder="Email"
-                type="email"
-                errorText={errors.email?.message}
-                form={{ ...register("email") }}
-              />
+            <Input
+              className={s.input}
+              placeholder="Email"
+              type="email"
+              errorText={errors.email?.message}
+              form={{ ...register("email") }}
+            />
             <div className={s.policy}>
-                <Checkbox
-                  label={[
-                    "I agree to ",
-                    <Link href="privacy-policy">terms and conditions</Link>,
-                    " and to the processing of my  personal data to receive communication from Coursalitycis and its partners",
-                  ]}
-                />
-                <p></p>
-              </div>
+              <Checkbox
+                label={[
+                  "I agree to ",
+                  <Link href="privacy-policy">terms and conditions</Link>,
+                  " and to the processing of my  personal data to receive communication from Coursalytics and its partners",
+                ]}
+              />
+              <p></p>
+            </div>
 
             <Button type="submit" className={s.btn} style="accent">
               Submit

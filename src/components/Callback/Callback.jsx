@@ -72,7 +72,7 @@ export const Callback = () => {
                   label={[
                     "I agree to ",
                     <Link href="privacy-policy">terms and conditions</Link>,
-                    " and to the processing of my  personal data to receive communication from Coursalitycis and its partners",
+                    " and to the processing of my  personal data to receive communication from Coursalytics and its partners",
                   ]}
                 />
                 <p></p>
