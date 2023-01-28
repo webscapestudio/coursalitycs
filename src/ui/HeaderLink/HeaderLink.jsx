@@ -103,7 +103,7 @@ export const HeaderLink = ({
                       link="https://coursalytics.com/topics"
                       style="accent"
                     >
-                      See all topic
+                      See all topics
                     </Button>
                   </div>
                 </a>
