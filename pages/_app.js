@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/globals.scss";
 
-import { wrapper } from "../src/store/store";
 import CookieConsent from "react-cookie-consent";
 import Script from "next/script";
 import { useRouter } from "next/router";

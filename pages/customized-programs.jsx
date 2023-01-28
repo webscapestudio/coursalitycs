@@ -65,7 +65,8 @@ export default function CustomizedPrograms({ experts }) {
     {
       id: 2,
       icon: ListIcon,
-      title: "4-hour workshop with an artificial intelligence C-level practitioner",
+      title:
+        "4-hour workshop with an artificial intelligence C-level practitioner",
       text: "from a billion-dollar corporation for one of the largest mining companies",
     },
     {
@@ -139,13 +140,15 @@ export default function CustomizedPrograms({ experts }) {
     },
     {
       id: 4,
-      title: "What if the language spoken in the company does not correspond to the language of a potential expert?",
+      title:
+        "What if the language spoken in the company does not correspond to the language of a potential expert?",
       content:
         "We are sure that the language barrier should not become an obstacle on the way to education. Therefore, our team is always ready to provide a simultaneous translation service for the event. We have been cooperating with the best UN translators for many years, so you don't have to worry about the professionalism and quality of the translation.",
     },
     {
       id: 5,
-      title: "Is it possible to request more than one expert for several events?",
+      title:
+        "Is it possible to request more than one expert for several events?",
       content:
         "Sure, we do not limit you in the number of experts. We can help you find several specialists for a number of events at once, just include this information in the application.",
     },
@@ -179,7 +182,21 @@ export default function CustomizedPrograms({ experts }) {
     <>
       <Head>
         <title>Coursalytics | Customized Programs</title>
-        <meta name="description" content="Autocontent" />
+        <meta
+          name="description"
+          content="Find and book online thousands of courses all over the world"
+          key="desc"
+        />
+        <meta property="og:title" content="Customized Propgrams" />
+        <meta name="og:site_name" content="Coursalytics"></meta>
+        <meta
+          property="og:description"
+          content="Find and book online thousands of courses all over the world"
+        />
+        <meta
+          property="og:image"
+          content="https://coursalytics.com/static/images/og_cover.png"
+        />
       </Head>
 
       <MainLayout>
@@ -192,11 +209,21 @@ export default function CustomizedPrograms({ experts }) {
           </div>
         </section>
 
-        <HowItWorks title={["How", <span> it works</span>]} data={HowItWorksData} noButton={true} />
+        <HowItWorks
+          title={["How", <span> it works</span>]}
+          data={HowItWorksData}
+          noButton={true}
+        />
 
         <WeOrganize
           className
-          title={["We ", <span>organize and implement </span>, "educational", <br />, "programs on a turn-key basis"]}
+          title={[
+            "We ",
+            <span>organize and implement </span>,
+            "educational",
+            <br />,
+            "programs on a turn-key basis",
+          ]}
           data={weOrganizeData}
         />
 
@@ -229,28 +256,32 @@ export default function CustomizedPrograms({ experts }) {
             <div className={s.sure__wrap}>
               <div className={s.sure__item}>
                 <p>
-                  <span>Gain new applied knowledge</span> in your or related field or function
+                  <span>Gain new applied knowledge</span> in your or related
+                  field or function
                 </p>
               </div>
               <div className={s.div}></div>
 
               <div className={s.sure__item}>
                 <p>
-                  <span>Enjoy the process: </span> studying should not be a burden!
+                  <span>Enjoy the process: </span> studying should not be a
+                  burden!
                 </p>
               </div>
               <div className={s.div}></div>
 
               <div className={s.sure__item}>
                 <p>
-                  <span>Get a boost</span> of motivation that will move your team to success
+                  <span>Get a boost</span> of motivation that will move your
+                  team to success
                 </p>
               </div>
               <div className={s.div}></div>
 
               <div className={s.sure__item}>
                 <p>
-                  <span>Get the maximum benefit</span> with the minimum effort and cost on your part
+                  <span>Get the maximum benefit</span> with the minimum effort
+                  and cost on your part
                 </p>
               </div>
             </div>
@@ -282,7 +313,9 @@ export default function CustomizedPrograms({ experts }) {
 }
 
 export async function getServerSideProps() {
-  const expRes = await axios.get("https://ca-production.coursalytics.com/api/homepage/experts?limit=7");
+  const expRes = await axios.get(
+    "https://ca-production.coursalytics.com/api/homepage/experts?limit=7"
+  );
   const experts = await expRes.data.experts;
   return { props: { experts } };
 }

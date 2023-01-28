@@ -151,6 +151,21 @@ export default function Experts() {
     <>
       <Head>
         <title>Coursalytics | Experts</title>
+        <meta
+          name="description"
+          content="Find and book online thousands of courses all over the world"
+          key="desc"
+        />
+        <meta property="og:title" content="Experts" />
+        <meta name="og:site_name" content="Coursalytics"></meta>
+        <meta
+          property="og:description"
+          content="Find and book online thousands of courses all over the world"
+        />
+        <meta
+          property="og:image"
+          content="https://coursalytics.com/static/images/og_cover.png"
+        />
       </Head>
 
       <MainLayout>

@@ -1,9 +1,9 @@
-import Head from "next/head"
-import Link from "next/link"
-import { Callback } from "../src/components"
-import MainLayout from "../src/layouts/MainLayout"
-import { Title } from "../src/ui"
-import s from "./faq.module.scss"
+import Head from "next/head";
+import Link from "next/link";
+import { Callback } from "../src/components";
+import MainLayout from "../src/layouts/MainLayout";
+import { Title } from "../src/ui";
+import s from "./faq.module.scss";
 
 export default function Faq() {
   const faq = [
@@ -37,11 +37,26 @@ export default function Faq() {
       title: "What if I need to cancel the course?",
       text: "Executive education is usually rather expensive, and some non-degree courses can exceed USD 80K, but there are also other shorter or online versions of courses that are within several hundred USD. There is always an opportunity to find something within your budget.",
     },
-  ]
+  ];
   return (
     <>
       <Head>
         <title>Coursalytics | Faq</title>
+        <meta
+          name="description"
+          content="Find and book online thousands of courses all over the world"
+          key="desc"
+        />
+        <meta property="og:title" content="FAQ" />
+        <meta name="og:site_name" content="Coursalytics"></meta>
+        <meta
+          property="og:description"
+          content="Find and book online thousands of courses all over the world"
+        />
+        <meta
+          property="og:image"
+          content="https://coursalytics.com/static/images/og_cover.png"
+        />
       </Head>
 
       <MainLayout>
@@ -103,5 +118,5 @@ export default function Faq() {
         </section>
       </MainLayout>
     </>
-  )
+  );
 }

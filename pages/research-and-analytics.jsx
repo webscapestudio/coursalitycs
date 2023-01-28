@@ -30,12 +30,14 @@ export default function AboutPage() {
     {
       id: 1,
       num: "01",
-      title: "Tell us about your business or educational goals and tasks that require research or consulting",
+      title:
+        "Tell us about your business or educational goals and tasks that require research or consulting",
     },
     {
       id: 2,
       num: "02",
-      title: "We present you with a developed action plan and research design needed to achieve your goals",
+      title:
+        "We present you with a developed action plan and research design needed to achieve your goals",
     },
     {
       id: 3,
@@ -166,7 +168,8 @@ export default function AboutPage() {
     },
     {
       id: 4,
-      title: "Is there any limitations about the industry of education you can conduct the research in?",
+      title:
+        "Is there any limitations about the industry of education you can conduct the research in?",
       content:
         "No, we are open to any ideas and research problems you may have: tell us about your goals and we will see how we can help you with them.",
     },
@@ -175,7 +178,22 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>Research & Consulting</title>
+        <title>Coursalytics | Research & Consulting</title>
+        <meta
+          name="description"
+          content="Find and book online thousands of courses all over the world"
+          key="desc"
+        />
+        <meta property="og:title" content="Research & Consulting" />
+        <meta name="og:site_name" content="Coursalytics"></meta>
+        <meta
+          property="og:description"
+          content="Find and book online thousands of courses all over the world"
+        />
+        <meta
+          property="og:image"
+          content="https://coursalytics.com/static/images/og_cover.png"
+        />
       </Head>
 
       <MainLayout>
@@ -212,7 +230,11 @@ export default function AboutPage() {
         />
 
         <WeOrganize
-          title={["We conduct qualitative and quantitative", <br />, "research based on real data"]}
+          title={[
+            "We conduct qualitative and quantitative",
+            <br />,
+            "research based on real data",
+          ]}
           data={weOrganizeData}
         />
 
@@ -229,12 +251,16 @@ export default function AboutPage() {
                 <ul>
                   <li>Assist you in making decisions based on relevant data</li>
                   <li>
-                    Give you data-driven recommendations to help you find out, where and what the employees should study
+                    Give you data-driven recommendations to help you find out,
+                    where and what the employees should study
                   </li>
                   <li>
-                    Analyze the competency assessment model and develop educational solutions that optimally match it
+                    Analyze the competency assessment model and develop
+                    educational solutions that optimally match it
                   </li>
-                  <li>Determine the budget to be allocated for educational needs</li>
+                  <li>
+                    Determine the budget to be allocated for educational needs
+                  </li>
                   <li>Select courses or develop customized programs</li>
                 </ul>
               </div>
@@ -244,16 +270,23 @@ export default function AboutPage() {
                 <WeCanSecond />
                 <ul>
                   <li>Assist you in making decisions based on relevant data</li>
-                  <li>Analyze industry best practices to improve your clients' top management training system</li>
                   <li>
-                    Analyze the strengths and weaknesses of your educational programs, determine your competitive
-                    advantage
+                    Analyze industry best practices to improve your clients' top
+                    management training system
                   </li>
                   <li>
-                    Identify the topics in demand to create new educational programs and analyze all the information
-                    about who teaches it and how
+                    Analyze the strengths and weaknesses of your educational
+                    programs, determine your competitive advantage
                   </li>
-                  <li>Determine what you need to focus on in order to compete with top universities</li>
+                  <li>
+                    Identify the topics in demand to create new educational
+                    programs and analyze all the information about who teaches
+                    it and how
+                  </li>
+                  <li>
+                    Determine what you need to focus on in order to compete with
+                    top universities
+                  </li>
                 </ul>
               </div>
             </div>
